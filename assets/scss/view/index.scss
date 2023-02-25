@@ -2,14 +2,14 @@
 @use "../variables";
 @use "../fonts";
 
-#showcase {
-  height: 700px;
-
+main {
   padding: math.div(variables.$site-lr-padding, 2) variables.$site-lr-padding * 2;
+}
 
+#showcase {
   video {
     width: 100%;
-    height: 600px;
+    height: variables.$index-showcase-height;
     position: absolute;
     top: 0;
     left: 0;
@@ -32,5 +32,24 @@
     color: white;
     margin: 0;
     font: 300 18px fonts.$font-stack;
+  }
+}
+
+#sec-wwr {
+  position: absolute;
+  top: variables.$index-showcase-height;
+  left: 0;
+  padding: math.div(variables.$site-lr-padding, 2) variables.$site-lr-padding * 2;
+  text-align: center;
+
+  h1 {
+    margin: 0 0 20px 0;
+    font-size: 80px;
+  }
+
+  p {
+    margin: 0 0 40px 0;
+    font-weight: 600;
+    font-size: 18px;
   }
 }
