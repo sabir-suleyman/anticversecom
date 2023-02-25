@@ -1,0 +1,36 @@
+@use "sass:math";
+@use "../variables";
+@use "../fonts";
+
+#showcase {
+  height: 700px;
+
+  padding: math.div(variables.$site-lr-padding, 2) variables.$site-lr-padding * 2;
+
+  video {
+    width: 100%;
+    height: 600px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    z-index: -1;
+  }
+
+  h1 {
+    color: white;
+    margin: 0;
+    font: 300 40px fonts.$font-stack;
+    letter-spacing: -2px;
+
+    span {
+      font-weight: 600;
+    }
+  }
+
+  h2 {
+    color: white;
+    margin: 0;
+    font: 300 18px fonts.$font-stack;
+  }
+}
