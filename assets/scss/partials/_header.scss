@@ -1,13 +1,35 @@
+@import "../fonts";
+
 #header {
-  background-color: magenta;
+  z-index: 100;
+  background: transparent;
 
   #header-upper {
-    background: transparent;
+    background: white;
+    color: black;
+
     display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 10px;
+
+    font: 400 13px $font-stack;
+    border-bottom: 1px solid white;
   }
 
   #header-lower {
     background: transparent;
+    color: white;
+
     display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    #navbar  {
+      display: flex;
+    }
   }
 }
