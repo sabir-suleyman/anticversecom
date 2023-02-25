@@ -6,7 +6,7 @@
 @use "fonts";
 @use "variables";
 
-@use "partials/_header";
+@use "partials/header";
 
 html, body {
   margin: 0;
@@ -26,6 +26,10 @@ body {
   min-height: -webkit-fill-available;
   min-height: -moz-available;
   min-height: fill-available;
+
+  font-family: fonts.$font-stack;
+  background-color: black;
+  color: white;
 }
 
 a, .no-highlight {
