@@ -1,4 +1,5 @@
 @import "../fonts";
+@import "../variables";
 
 #header {
   z-index: 100;
@@ -27,6 +28,8 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+
+    padding: 0 $site-lr-padding;
 
     #navbar  {
       display: flex;
