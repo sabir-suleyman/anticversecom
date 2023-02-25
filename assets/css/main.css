@@ -1,0 +1,13 @@
+#header {
+  background-color: magenta;
+}
+#header #header-upper {
+  background: transparent;
+  display: flex;
+}
+#header #header-lower {
+  background: transparent;
+  display: flex;
+}
+
+/*# sourceMappingURL=main.css.map */
