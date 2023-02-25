@@ -8,10 +8,49 @@
 
 @use "partials/_header";
 
+html, body {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+//noinspection CssInvalidPropertyValue
+html {
+  height: -webkit-fill-available;
+  height: -moz-available;
+  height: fill-available;
+}
+
+//noinspection CssInvalidPropertyValue
+body {
+  min-height: -webkit-fill-available;
+  min-height: -moz-available;
+  min-height: fill-available;
+}
+
+a, .no-highlight {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
 a {
+  text-decoration: none;
   color: white;
 
   &:visited {
     color: white;
+  }
+}
+
+ul {
+  padding: 0;
+
+  li {
+    list-style-type: none;
   }
 }
