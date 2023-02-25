@@ -1,0 +1,55 @@
+@use "sass:math";
+@use "../variables";
+@use "../fonts";
+
+main {
+  padding: math.div(variables.$site-lr-padding, 2) variables.$site-lr-padding * 2;
+}
+
+#showcase {
+  video {
+    width: 100%;
+    height: variables.$index-showcase-height;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    z-index: -1;
+  }
+
+  h1 {
+    color: white;
+    margin: 0;
+    font: 300 40px fonts.$font-stack;
+    letter-spacing: -2px;
+
+    span {
+      font-weight: 600;
+    }
+  }
+
+  h2 {
+    color: white;
+    margin: 0;
+    font: 300 18px fonts.$font-stack;
+  }
+}
+
+#sec-wwr {
+  position: absolute;
+  top: variables.$index-showcase-height;
+  left: 0;
+  padding: math.div(variables.$site-lr-padding, 2) variables.$site-lr-padding * 2;
+  text-align: center;
+
+  h1 {
+    margin: 0 0 20px 0;
+    font-size: 80px;
+  }
+
+  p {
+    margin: 0 0 40px 0;
+    font-weight: 600;
+    font-size: 18px;
+  }
+}
