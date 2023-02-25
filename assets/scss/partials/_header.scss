@@ -20,7 +20,7 @@
 
     padding: math.div(variables.$header-upper-padding, 2) variables.$header-upper-padding;
 
-    font: 400 13px fonts.$font-stack;
+    font: 400 15px fonts.$font-stack;
     border-bottom: 1px solid white;
 
     a {
@@ -54,7 +54,8 @@
     h1 {
       align-self: center;
       color: white;
-      font: 600 26px fonts.$font-stack;
+      font: 600 30px fonts.$font-stack;
+      letter-spacing: -1px;
     }
 
     #navbar  {
@@ -64,9 +65,9 @@
       justify-content: flex-end;
 
       .navitem {
-        margin-right: 5px;
+        margin-right: 10px;
 
-        font: 300 18px fonts.$font-stack;
+        font: 300 20px fonts.$font-stack;
       }
 
       .navitem-select {
