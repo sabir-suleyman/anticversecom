@@ -1,4 +1,17 @@
+//
+//    Anticverse Webraider
+//
+//    Maintainer: Ferit Yiğit BALABAN <balaban.ferityigit@anticverse.com> <fybalaban@fybx.dev>
+
 @use "fonts";
 @use "variables";
 
 @use "partials/_header";
+
+a {
+  color: white;
+
+  &:visited {
+    color: white;
+  }
+}

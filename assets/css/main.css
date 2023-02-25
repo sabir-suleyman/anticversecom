@@ -1,31 +1,62 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap");
 #header {
   z-index: 100;
   background: transparent;
 }
 #header #header-upper {
-  background: white;
-  color: black;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  padding: 10px;
+  padding: 15px 30px;
   font: 400 13px "Montserrat", sans-serif;
   border-bottom: 1px solid white;
 }
+#header #header-upper a {
+  color: white;
+}
+#header #header-upper a:visited {
+  color: white;
+}
 #header #header-lower {
-  background: transparent;
   color: white;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
-  padding: 0 100px;
+  padding: 35px 100px !important;
+}
+#header #header-lower #img-container {
+  flex-basis: 0;
+  flex-grow: 1;
+}
+#header #header-lower #img-container img {
+  height: 70px;
+  width: 70px;
+}
+#header #header-lower h1 {
+  align-self: center;
+  color: white;
+  font: 600 26px "Montserrat", sans-serif;
 }
 #header #header-lower #navbar {
   display: flex;
+  flex-basis: 0;
+  flex-grow: 1;
+  justify-content: flex-end;
+}
+#header #header-lower #navbar .navitem {
+  margin-right: 5px;
+  font: 300 18px "Montserrat", sans-serif;
+}
+#header #header-lower #navbar .navitem-select a {
+  color: #BA83F0;
+}
+
+a {
+  color: white;
+}
+a:visited {
+  color: white;
 }
 
 /*# sourceMappingURL=main.css.map */

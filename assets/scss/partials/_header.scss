@@ -1,38 +1,79 @@
-@import "../fonts";
-@import "../variables";
+//
+//    Anticverse Webraider
+//
+//    Maintainer: Ferit Yiğit BALABAN <balaban.ferityigit@anticverse.com> <fybalaban@fybx.dev>
+
+@use "sass:math";
+
+@use "../fonts";
+@use "../variables";
 
 #header {
   z-index: 100;
   background: transparent;
 
   #header-upper {
-    background: white;
-    color: black;
-
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
 
-    padding: 10px;
+    padding: math.div(variables.$header-upper-padding, 2) variables.$header-upper-padding;
 
-    font: 400 13px $font-stack;
+    font: 400 13px fonts.$font-stack;
     border-bottom: 1px solid white;
+
+    a {
+      color: white;
+
+      &:visited {
+        color: white;
+      }
+    }
   }
 
   #header-lower {
-    background: transparent;
     color: white;
 
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
 
-    padding: 0 $site-lr-padding;
+    padding: 35px variables.$site-lr-padding !important;
+
+    #img-container {
+      flex-basis: 0;
+      flex-grow: 1;
+
+      img {
+        height: 70px;
+        width: 70px;
+      }
+    }
+
+    h1 {
+      align-self: center;
+      color: white;
+      font: 600 26px fonts.$font-stack;
+    }
 
     #navbar  {
       display: flex;
+      flex-basis: 0;
+      flex-grow: 1;
+      justify-content: flex-end;
+
+      .navitem {
+        margin-right: 5px;
+
+        font: 300 18px fonts.$font-stack;
+      }
+
+      .navitem-select {
+        a {
+          color: #BA83F0;
+        }
+      }
     }
   }
 }
