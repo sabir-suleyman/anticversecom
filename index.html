@@ -2343,112 +2343,7 @@
     <meta content="https://static.wixstatic.com/media/57bcee_36f61e6625534656ae4082cb1bf2c37c%7Emv2.jpg/v1/fit/w_2500,h_1330,al_c/57bcee_36f61e6625534656ae4082cb1bf2c37c%7Emv2.jpg"
           name="twitter:image">
 
-    <script id="registry-components-manifests" type="application/json">
-        {
-        "libraries": [
-            {
-                "version": "2.0",
-                "host": "thunderbolt",
-                "namespace": "wixui",
-                "baseURL": "https://static.parastorage.com/services/editor-elements-library/dist/thunderbolt/",
-                "model": [
-                    "06ed1a3f.bundle.min.js",
-                    "0823e5db.min.css"
-                ],
-                "assets": [
-                    [
-                        "stylable-metadata",
-                        "editor-elements-library.thunderbolt.ff6a2a7ad074a7e71b160265df197babd46070e0.metadata.json"
-                    ]
-                ],
-                "components": {
-                    "ClassicSection": [
-                        "514b8429.bundle.min.js",
-                        "da297d6d.min.css"
-                    ],
-                    "FiveGridLine_SolidLine": [
-                        "9fdf6ff8.bundle.min.js",
-                        "e5175607.min.css"
-                    ],
-                    "SkipToContentButton": [
-                        "96644c35.bundle.min.js",
-                        "39deac6a.min.css"
-                    ],
-                    "StylableHorizontalMenu_WrapColumn": [
-                        "6b618d03.bundle.min.js",
-                        "6a5e0d5c.min.css"
-                    ]
-                },
-                "batches": {
-                    "bootstrap": {
-                        "url": [
-                            "671a765b.bundle.min.js",
-                            "ad00b47d.min.css"
-                        ],
-                        "components": [
-                            "Anchor",
-                            "FooterContainer_TransparentScreen",
-                            "HeaderContainer_TransparentScreen",
-                            "BackgroundGroup",
-                            "PageGroup",
-                            "PagesContainer",
-                            "VectorImage",
-                            "WRichText",
-                            "MasterPage",
-                            "PinnedLayer"
-                        ],
-                        "parts": []
-                    },
-                    "bootstrap-classic": {
-                        "url": [
-                            "b71026ad.bundle.min.js",
-                            "03dc4026.min.css"
-                        ],
-                        "components": [
-                            "Column",
-                            "Group",
-                            "PageBackground",
-                            "StripColumnsContainer",
-                            "WPhoto_NoSkinPhoto",
-                            "ContainerWrapper",
-                            "Page_TransparentPageSkin"
-                        ],
-                        "parts": []
-                    }
-                },
-                "shared": [],
-                "statics": {},
-                "parts": {}
-            },
-            {
-                "version": "2.0",
-                "host": "thunderbolt",
-                "namespace": "dsgnsys",
-                "baseURL": "https://static.parastorage.com/services/editor-elements-design-systems/dist/thunderbolt/",
-                "model": [
-                    "382cab16.bundle.min.js",
-                    "bacb301c.min.css"
-                ],
-                "assets": [
-                    [
-                        "stylable-metadata",
-                        "editor-elements-design-systems.thunderbolt.0469c075f1fafade61b7936d6b67816b444d53d4.metadata.json"
-                    ]
-                ],
-                "components": {},
-                "shared": [],
-                "batches": {},
-                "statics": {},
-                "parts": {}
-            }
-        ]
-    }</script>
-    <script>
-        window.componentsRegistry.runtime = JSON.parse(document.getElementById('registry-components-manifests').textContent)
-    </script>
-    <script>if (typeof window.componentsRegistry !== 'undefined' && window.componentsRegistry.manifestsLoadedResolve) {
-        window.componentsRegistry.manifestsLoadedResolve()
-    }</script>
+
 
 
     <script src="./Anticverse_files/rb_wixui.thunderbolt_bootstrap.671a765b.bundle.min.js.download"></script>
@@ -2458,7 +2353,8 @@
     <script src="./Anticverse_files/rb_wixui.thunderbolt[SkipToContentButton].96644c35.bundle.min.js.download"></script>
     <script src="./Anticverse_files/rb_wixui.thunderbolt[ClassicSection].514b8429.bundle.min.js.download"></script>
     <script async="async" src="./Anticverse_files/app.bundle.min.js.download" type="text/javascript"></script>
-    <style>:root {
+    <style>
+        :root {
         --cookie-banner-primary-color: #fff;
         --cookie-banner-secondary-color: #000;
         --cookie-banner-font-family: HelveticaNeue, Helvetica Neue, helvetica, Sans-Serif;
@@ -3509,47 +3405,8 @@
 
 
 
-<body class="" data-gr-ext-installed="" data-new-gr-c-s-check-loaded="14.1097.0">
-<script type="text/javascript">
-    var bodyCacheable = true;
+<body>
 
-    var exclusionReason = {"shouldRender": true, "forced": false};
-    var ssrInfo = {"renderBodyTime": 449, "renderTimeStamp": 1676836917347}
-</script>
-
-
-<script>
-    window.clientSideRender = false;
-    window.bi.wixBiSession.isServerSide = 1;
-
-</script>
-
-
-<!--pageHtmlEmbeds.bodyStart start-->
-<script id="pageHtmlEmbeds.bodyStart start" type="wix/htmlEmbeds"></script>
-
-<script id="pageHtmlEmbeds.bodyStart end" type="wix/htmlEmbeds"></script>
-<!--pageHtmlEmbeds.bodyStart end-->
-
-
-<script id="wix-first-paint">
-    if (window.ResizeObserver &&
-        (!window.PerformanceObserver || !PerformanceObserver.supportedEntryTypes || PerformanceObserver.supportedEntryTypes.indexOf('paint') === -1)) {
-        new ResizeObserver(function (entries, observer) {
-            entries.some(function (entry) {
-                var contentRect = entry.contentRect;
-                if (contentRect.width > 0 && contentRect.height > 0) {
-                    requestAnimationFrame(function (now) {
-                        window.wixFirstPaint = now;
-                        dispatchEvent(new CustomEvent('wixFirstPaint'));
-                    });
-                    observer.disconnect();
-                    return true;
-                }
-            });
-        }).observe(document.body);
-    }
-</script>
 
 <pages-css id="pages-css">
     <style id="css_masterPage">#masterPage:not(.landingPage) #PAGES_CONTAINER {
