@@ -1,0 +1,60 @@
+@use "../colors";
+@use "../fonts";
+
+.card-gallery {
+  .card {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    color: #2e2d31;
+    background-image: url("../../media/index/mesh.webp");
+    background-size: cover;
+    overflow: hidden;
+    border-radius: 30px;
+
+    .temporary_text {
+      font-weight: bold;
+      font-size: 24px;
+      padding: 6px 12px;
+      color: #f8f8f8;
+    }
+
+    .card_content {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      padding: 20px;
+      background: #f2f2f2;
+      border-top-left-radius: 30px;
+      transform: translateY(100px);
+      transition: transform .25s;
+      text-align: left;
+
+      .card_title {
+        font: 600 22px fonts.$font-stack;
+        color: #000000;
+      }
+
+      .card_description {
+        font-size: 14px;
+        opacity: 0;
+        transition: opacity .5s;
+      }
+    }
+
+    &:hover {
+      .card_content {
+        transform: translateY(50px);
+      }
+
+      .card_description {
+        opacity: 1;
+        transition-delay: .25s;
+      }
+    }
+  }
+
+  .card-black {
+
+  }
+}
