@@ -7,6 +7,13 @@ main {
 }
 
 #showcase {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  height: variables.$index-showcase-height;
+  width: 100%;
+
   video {
     width: 100%;
     height: variables.$index-showcase-height;
@@ -35,17 +42,19 @@ main {
   }
 }
 
+#sec-wwr, #sec-labs, #sec-founders, #sec-partners {
+  h1 {
+    margin: 0 0 20px 0;
+    font-size: 80px;
+  }
+}
+
 #sec-wwr {
   position: absolute;
   top: variables.$index-showcase-height;
   left: 0;
   padding: math.div(variables.$site-lr-padding, 2) variables.$site-lr-padding * 2;
   text-align: center;
-
-  h1 {
-    margin: 0 0 20px 0;
-    font-size: 80px;
-  }
 
   p {
     margin: 0 0 40px 0;
