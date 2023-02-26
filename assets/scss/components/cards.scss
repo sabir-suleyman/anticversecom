@@ -1,9 +1,18 @@
 @use "../colors";
 @use "../fonts";
 
+$logo-height: 80px;
+
 .card-gallery {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+
   .card {
     position: relative;
+    margin: 0 5em 2.5em 0;
+
     width: 250px;
     height: 250px;
     color: #2e2d31;
@@ -12,45 +21,79 @@
     overflow: hidden;
     border-radius: 30px;
 
-    .temporary_text {
-      font-weight: bold;
-      font-size: 24px;
-      padding: 6px 12px;
+    .image {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
       color: #f8f8f8;
+      width: 100%;
+      height: 100%;
+
+      img {
+        height: $logo-height;
+        transition: margin-top 250ms ease-out;
+        margin: 30% 0 0 0;
+      }
     }
 
-    .card_content {
+    .content {
       position: absolute;
       left: 0;
       bottom: 0;
       padding: 20px;
       background: #f2f2f2;
       border-top-left-radius: 30px;
-      transform: translateY(100px);
-      transition: transform .25s;
+      transform: translateY(110px);
+      transition: transform .25s ease-out;
       text-align: left;
 
-      .card_title {
+      .title {
         font: 600 22px fonts.$font-stack;
         color: #000000;
       }
 
-      .card_description {
-        font-size: 14px;
+      .description {
+        font: 400 14px fonts.$font-stack;
         opacity: 0;
-        transition: opacity .5s;
+        transition: opacity .5s ease-out;
+        transition-delay: 250ms;
       }
     }
 
     &:hover {
-      .card_content {
-        transform: translateY(50px);
+      .image {
+        img {
+          margin: 15% 0;
+        }
       }
 
-      .card_description {
-        opacity: 1;
-        transition-delay: .25s;
+      .content {
+        transform: translateY(50px);
+
+        .description {
+          opacity: 1;
+        }
       }
+    }
+
+    $hue-degree: 0;
+    @for $i from 1 through 6 {
+      &:nth-of-type(#{$i}) {
+        .image {
+          backdrop-filter: hue-rotate($hue-degree + deg);
+        }
+      }
+      $hue-degree: $hue-degree + 60;
+    }
+
+    &:nth-of-type(5) .image img {
+      width: 200px;
+      height: unset;
+      margin-top: 40%;
+    }
+
+    &:hover:nth-of-type(5) .image img {
+      margin-top: 32%;
     }
   }
 
