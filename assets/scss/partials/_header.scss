@@ -27,7 +27,7 @@
     padding: math.div(variables.$header-upper-padding, 2) variables.$header-upper-padding;
 
     font: 400 15px fonts.$font-stack;
-    border-bottom: 1px solid #FFFFFFC0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
 
     a {
       color: white;
