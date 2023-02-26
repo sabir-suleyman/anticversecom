@@ -10,4 +10,4 @@ Anticverse Labs. kurumsal websitesinin geliştirildiği repository'e hoş geldin
 
 ## yayında olan sayfalar
 
-- `dev`: `https://anticverse.github.io/com`
+- `dev`: https://anticverse.github.io/com
