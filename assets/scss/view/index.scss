@@ -2,7 +2,7 @@
 @use "../variables";
 @use "../fonts";
 
-.card {
+.content {
   padding: math.div(variables.$site-lr-padding, 2) variables.$site-lr-padding * 2;
 
   text-align: center;
@@ -19,7 +19,7 @@
   }
 }
 
-.card-white {
+.content-white {
   background: white;
   color: black;
 }
@@ -58,13 +58,5 @@
     color: white;
     margin: 0;
     font: 300 18px fonts.$font-stack;
-  }
-}
-
-#sec-wwr {
-  p {
-    margin: 0 0 40px 0;
-    font-weight: 600;
-    font-size: 18px;
   }
 }
