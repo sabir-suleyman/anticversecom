@@ -2,12 +2,8 @@
 @use "../variables";
 @use "../fonts";
 
-main {
-  padding: 0 variables.$site-lr-padding * 2;
-}
-
 .card {
-  padding: math.div(variables.$site-lr-padding, 2) 0;
+  padding: math.div(variables.$site-lr-padding, 2) variables.$site-lr-padding * 2;
 
   text-align: center;
 
@@ -22,8 +18,9 @@ main {
   flex-direction: column;
   justify-content: center;
 
+  padding-left: variables.$site-lr-padding * 2;
+
   height: variables.$index-showcase-height;
-  width: 100%;
 
   video {
     width: 100%;
