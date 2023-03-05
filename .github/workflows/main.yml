@@ -1,0 +1,23 @@
+name: Deploy production
+
+on:
+  push:
+    branches: ["prod"]
+
+jobs:
+  deploy:
+    environment:
+      name: production
+      url: "anticverse.com"
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Upload to server
+        uses: SamKirkland/FTP-Deploy-Action@4.3.3
+        with:
+          server: ${{ secrets.FTP_SERV }}
+          username: ${{ secrets.FTP_USER }}
+          password: ${{ secrets.FTP_PASS }}
+          server-dir: ${{ secrets.FTP_PATH }}
+          protocol: ftps
