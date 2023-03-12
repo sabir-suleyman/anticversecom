@@ -65,3 +65,40 @@ img {
   max-inline-size: 100%;
   block-size: auto;
 }
+
+#showcase {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding-left: variables.$site-lr-padding * 2;
+
+  height: variables.$index-showcase-height;
+
+  video, img {
+    width: 100%;
+    height: variables.$index-showcase-height;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: none;
+    z-index: -1;
+  }
+
+  h1 {
+    color: white;
+    margin: 0;
+    font: 300 40px fonts.$font-stack;
+    letter-spacing: -2px;
+
+    span {
+      font-weight: 600;
+    }
+  }
+
+  h2 {
+    color: white;
+    margin: 0;
+    font: 300 18px fonts.$font-stack;
+  }
+}
