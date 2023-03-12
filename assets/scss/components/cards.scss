@@ -1,3 +1,8 @@
+//
+//    Anticverse Webraider
+//
+//    Maintainer: Ferit Yiğit BALABAN <balaban.ferityigit@anticverse.com> <fybalaban@fybx.dev>
+
 @use "../colors";
 @use "../fonts";
 
@@ -13,8 +18,8 @@ $logo-height: 80px;
     position: relative;
     margin: 0 5em 2.5em 0;
 
-    width: 250px;
-    height: 250px;
+    width: 300px;
+    height: 300px;
     color: #2e2d31;
     background-image: url("../../media/index/mesh.webp");
     background-size: cover;
@@ -37,6 +42,12 @@ $logo-height: 80px;
     }
 
     .content {
+      // Burayı okuyan arkadaştan özür dilerim, kartın genel çalışma biçimi
+      // fazlasıyla sıkıntılı, dolayısıyla şu anda felaket bir hack yazmaktan
+      // başka bir çare bulamıyorum, Allah yardımcın olsun :)
+      max-height: 140px;
+      min-height: 140px;
+
       position: absolute;
       left: 0;
       bottom: 0;
