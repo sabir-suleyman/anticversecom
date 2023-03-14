@@ -1,0 +1,23 @@
+name: Deploy to public dev
+
+on:
+  push:
+    branches: ["main"]
+
+jobs:
+  deploy:
+    environment:
+      name: "public-dev"
+      url: "dev.anticverse.com"
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Upload to server
+        uses: SamKirkland/FTP-Deploy-Action@4.3.3
+        with:
+          server: ${{ "ftp.anticverse.com" }}
+          username: ${{ secrets.FTP_DEV_USER }}
+          password: ${{ secrets.FTP_DEV_PASS }}
+          server-dir: ${{ secrets.FTP_DEV_PATH }}
+          protocol: ftps
