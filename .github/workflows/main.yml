@@ -8,7 +8,7 @@ jobs:
   deploy:
     environment:
       name: production
-      url: "anticverse.com"
+      url: "https://anticverse.com"
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
