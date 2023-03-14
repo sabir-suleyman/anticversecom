@@ -17,7 +17,7 @@ jobs:
         uses: SamKirkland/FTP-Deploy-Action@4.3.3
         with:
           server: ${{ "ftp.anticverse.com" }}
-          username: ${{ secrets.FTP_USER }}
-          password: ${{ secrets.FTP_PASS }}
-          server-dir: ${{ secrets.FTP_PATH_DEV }}
+          username: ${{ secrets.FTP_DEV_USER }}
+          password: ${{ secrets.FTP_DEV_PASS }}
+          server-dir: ${{ secrets.FTP_DEV_PATH }}
           protocol: ftps
