@@ -10,7 +10,9 @@ $px_text: 16px;
 $images: "../../media/legion/emg.webp", "../../media/legion/bag.webp", "../../media/legion/abd.webp", "../../media/legion/cek.webp", "../../media/legion/cmc.webp", "../../media/legion/erg.webp", "../../media/legion/fyb.webp", "../../media/legion/mua.webp", "../../media/legion/ond.webp", "../../media/legion/org.webp", "../../media/legion/ozo.webp", "../../media/legion/tad.webp";
 
 #showcase {
-  filter: brightness(0.5);
+  video {
+    filter: brightness(0.5) saturate(1.5);
+  }
 }
 
 #sec-wrw, #sec-details, #sec-legion {
