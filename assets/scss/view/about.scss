@@ -1,0 +1,33 @@
+@use "sass:math";
+@use "../variables";
+@use "../colors";
+
+$px_heading1: 50px;
+$px_heading2: 25px;
+$px_text: 16px;
+
+#sec-wrw, #sec-details {
+  padding: 10px variables.$site-lr-padding;
+
+  h1 {
+    margin: math.div($px_heading1, 2) 0 math.div($px_heading1, 4) 0;
+    font-size: $px_heading1;
+  }
+
+  h2 {
+    font-size: $px_heading2;
+  }
+
+  p {
+    margin: math.div($px_text, 4);
+    font-size: $px_text;
+  }
+}
+
+#sec-wrw {
+  background: colors.$cl-dark500;
+}
+
+#sec-details {
+  background: colors.$cl-dark400;
+}
