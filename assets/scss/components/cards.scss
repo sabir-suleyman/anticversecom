@@ -112,3 +112,43 @@ $logo-height: 80px;
 
   }
 }
+
+.person-gallery {
+  display: flex;
+
+  .person {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    width: 200px;
+    height: 200px;
+    border-radius: 15px;
+
+    nav {
+      display: inline-flex;
+
+      a {
+        display: block;
+        width: 20px;
+        height: 20px;
+      }
+
+      .logo-linkedin {
+        background: url("../../media/logos/linkedin.webp");
+      }
+
+      .logo-instagram {
+        background: url("../../media/logos/instagram.svg");
+      }
+
+      .logo-github {
+        background: url("../../media/logos/github.svg");
+      }
+
+      .logo-github, .logo-instagram, .logo-linkedin {
+        background-size: contain;
+      }
+    }
+  }
+}
