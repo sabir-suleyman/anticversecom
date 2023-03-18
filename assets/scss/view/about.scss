@@ -7,6 +7,10 @@ $px_heading1: 50px;
 $px_heading2: 17.5px;
 $px_text: 16px;
 
+#showcase {
+  filter: brightness(0.5);
+}
+
 #sec-wrw, #sec-details {
   padding: 25px variables.$site-lr-padding * 2;
 
