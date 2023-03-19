@@ -1,0 +1,35 @@
+@use "../variables";
+@use "../fonts";
+
+#cta {
+  padding: 0 variables.$site-lr-padding * 2;
+
+  overflow: hidden;
+
+  h1 {
+    position: relative;
+    font: 400 48px fonts.$font-stack;
+
+    span {
+      font-weight: 600;
+      letter-spacing: -5px;
+      text-shadow: 5px 5px 20px;
+    }
+
+    &:nth-of-type(1) {
+      text-align: left;
+      color: #5CEDC4;
+
+    }
+
+    &:nth-of-type(2) {
+      text-align: center;
+      color: #E06393;
+    }
+
+    &:nth-of-type(3) {
+      text-align: right;
+      color: #F7BA60;
+    }
+  }
+}
