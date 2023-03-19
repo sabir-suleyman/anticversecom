@@ -1,12 +1,16 @@
 @use "sass:math";
 @use "../variables";
 @use "../fonts";
+@use "../colors";
 
 $px-heading: 50px;
 $px-text: 18px;
 
-#sec-cta {
+#sec-cta, #sec-contactbook {
   padding: 50px variables.$site-lr-padding * 2;
+}
+
+#sec-cta {
   display: flex;
   flex-direction: column;
 
@@ -67,6 +71,91 @@ $px-text: 18px;
       h1 {
         color: #F7BA60;
       }
+    }
+  }
+}
+
+#sec-contactbook {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(to right, #2a0845, #6441A5);
+
+  h1 {
+    margin: 0 0 math.div($px-heading, 4) 0;
+    font-size: $px-heading;
+    font-weight: 600;
+  }
+
+  h2 {
+    margin: 0;
+    font-size: math.div($px-heading, 2);
+    font-weight: 400;
+  }
+
+  .tabs {
+    margin: 50px 0 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+
+    label {
+      order: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 1rem 2rem;
+      margin-right: 0.2rem;
+      cursor: pointer;
+      background-color: colors.$cl-dark400;
+      font-weight: bold;
+      transition: background ease 0.3s;
+    }
+
+    .tab {
+      h1 {
+        font-size: 25px;
+      }
+
+      a {
+        font: 400 18px fonts.$font-stack;
+        color: colors.$cl-dark500;
+
+        &:after {
+          content: "↗"
+        }
+
+        &:hover {
+          text-decoration: underline;
+        }
+
+        &:active {
+          font-style: italic;
+        }
+      }
+
+      order: 9;
+      flex-grow: 1;
+      width: 100%;
+      height: 100%;
+      display: none;
+      padding: 20px;
+      color: colors.$cl-dark500;
+      background: colors.$cl-light100;
+      box-shadow: -10px 10px 0px 0px black;
+    }
+
+    input[type="radio"] {
+      display: none;
+    }
+
+    input[type="radio"]:checked + label {
+      color: colors.$cl-them500;
+      background: colors.$cl-light100;
+    }
+
+    input[type="radio"]:checked + label + .tab {
+      display: block;
     }
   }
 }
