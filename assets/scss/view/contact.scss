@@ -2,6 +2,7 @@
 @use "../variables";
 @use "../fonts";
 @use "../colors";
+@use "../animations";
 
 $px-heading: 50px;
 $px-text: 18px;
@@ -80,6 +81,8 @@ $px-text: 18px;
   flex-direction: column;
   align-items: center;
   background: linear-gradient(to right, #2a0845, #6441A5);
+  background-size: 400% 400%;
+  animation: rotate-gradient 8s ease-out infinite;
 
   h1 {
     margin: 0 0 math.div($px-heading, 4) 0;
