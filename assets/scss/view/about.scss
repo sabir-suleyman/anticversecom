@@ -16,7 +16,7 @@ $images: "../../media/legion/emg.webp", "../../media/legion/bag.webp", "../../me
 }
 
 #sec-wrw, #sec-details, #sec-legion {
-  padding: 25px variables.$site-lr-padding * 2;
+  padding: $px_heading1 variables.$site-lr-padding * 2;
 }
 
 #sec-wrw, #sec-details {
