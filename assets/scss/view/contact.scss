@@ -1,35 +1,71 @@
+@use "sass:math";
 @use "../variables";
 @use "../fonts";
 
+$px-heading: 50px;
+$px-text: 18px;
+
 #cta {
-  padding: 0 variables.$site-lr-padding * 2;
+  padding: 50px variables.$site-lr-padding * 2;
+  display: flex;
+  flex-direction: column;
 
-  overflow: hidden;
+  article {
+    h1 {
+      margin: $px-heading 0 math.div($px-heading, 4) 0;
+      display: inline-block;
+      font: 400 $px-heading fonts.$font-stack;
 
-  h1 {
-    position: relative;
-    font: 400 48px fonts.$font-stack;
+      span {
+        font-weight: 600;
+        letter-spacing: -5px;
+        text-shadow: 5px 5px 20px;
 
-    span {
-      font-weight: 600;
-      letter-spacing: -5px;
-      text-shadow: 5px 5px 20px;
+        a {
+          color: inherit;
+        }
+      }
+
+      &:hover {
+        font-weight: 600;
+        font-style: italic;
+
+        span {
+          font-weight: 400;
+          font-style: normal;
+        }
+      }
+    }
+
+    p {
+      margin: 0;
+      font: 400 $px-text fonts.$font-stack;
+
+      &:last-of-type {
+        margin: math.div($px-text, 2) 0 0 0;
+      }
     }
 
     &:nth-of-type(1) {
-      text-align: left;
-      color: #5CEDC4;
-
+      h1 {
+        margin-top: 0;
+        color: #5CEDC4;
+      }
     }
 
     &:nth-of-type(2) {
       text-align: center;
-      color: #E06393;
+
+      h1 {
+        color: #E06393;
+      }
     }
 
     &:nth-of-type(3) {
       text-align: right;
-      color: #F7BA60;
+      h1 {
+        color: #F7BA60;
+      }
     }
   }
 }
