@@ -19,7 +19,8 @@ $px-text: 18px;
       span {
         font-weight: 600;
         letter-spacing: -5px;
-        text-shadow: 5px 5px 20px;
+        animation: pulsate 250ms ease-in-out infinite alternate;
+        text-shadow: 5px 5px 21px;
 
         a {
           color: inherit;
@@ -67,5 +68,16 @@ $px-text: 18px;
         color: #F7BA60;
       }
     }
+  }
+}
+
+@keyframes pulsate {
+  100% {
+    text-shadow: 5px 5px 23px;
+  }
+
+  0% {
+
+    text-shadow: 5px 5px 17px;
   }
 }
