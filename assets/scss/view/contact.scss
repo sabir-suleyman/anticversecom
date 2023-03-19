@@ -159,14 +159,3 @@ $px-text: 18px;
     }
   }
 }
-
-@keyframes pulsate {
-  100% {
-    text-shadow: 5px 5px 23px;
-  }
-
-  0% {
-
-    text-shadow: 5px 5px 17px;
-  }
-}

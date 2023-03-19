@@ -1,0 +1,14 @@
+//
+//    Anticverse Webraider
+//
+//    Maintainer: Ferit Yiğit BALABAN <balaban.ferityigit@anticverse.com> <fybalaban@fybx.dev>
+
+@keyframes pulsate {
+  100% {
+    text-shadow: 5px 5px 23px;
+  }
+
+  0% {
+    text-shadow: 5px 5px 17px;
+  }
+}
