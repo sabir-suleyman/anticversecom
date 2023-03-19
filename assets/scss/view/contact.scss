@@ -6,7 +6,7 @@
 $px-heading: 50px;
 $px-text: 18px;
 
-#sec-cta, #sec-contactbook {
+#sec-cta, #sec-addressbook {
   padding: 50px variables.$site-lr-padding * 2;
 }
 
@@ -75,7 +75,7 @@ $px-text: 18px;
   }
 }
 
-#sec-contactbook {
+#sec-addressbook {
   display: flex;
   flex-direction: column;
   align-items: center;
