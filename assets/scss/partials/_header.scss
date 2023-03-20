@@ -8,6 +8,7 @@
 @use "../fonts";
 @use "../variables";
 @use "../colors";
+@use "../overflows";
 
 #header {
   position: absolute;
@@ -45,7 +46,15 @@
     flex-direction: row;
     align-items: center;
 
-    padding: 35px variables.$site-lr-padding !important;
+    padding: variables.$site-lr-padding300 * 0.3 variables.$site-lr-padding300 !important;
+
+    @include overflows.mx_width800 {
+      padding: variables.$site-lr-padding200 * 0.3 variables.$site-lr-padding200 !important;
+    }
+
+    @include overflows.mx_width1200 {
+      padding: variables.$site-lr-padding * 0.3 variables.$site-lr-padding !important;
+    }
 
     #img-container {
       flex-basis: 0;
@@ -60,8 +69,12 @@
     h1 {
       align-self: center;
       color: white;
-      font: 600 30px fonts.$font-stack;
       letter-spacing: -1px;
+      font: 600 20px fonts.$font-stack;
+
+      @include overflows.mx_width800 {
+        font: 600 30px fonts.$font-stack;
+      }
     }
 
     #navbar  {
@@ -72,8 +85,11 @@
 
       .navitem {
         margin-right: 10px;
+        font: 300 10px fonts.$font-stack;
 
-        font: 300 20px fonts.$font-stack;
+        @include overflows.mx_width800 {
+          font: 300 20px fonts.$font-stack;
+        }
       }
 
       .navitem-select {
