@@ -1,5 +1,6 @@
 @use "../colors";
 @use "../overflows";
+@use "../gradients";
 
 #hamburger-container {
   display: inline-flex;
@@ -89,3 +90,20 @@
   }
 }
 
+.active {
+  height: 100vh !important;
+  opacity: 1 !important;
+}
+
+#menu {
+  height: 0;
+  opacity: 0;
+
+  background: gradients.$grad-premium-dark;
+  background-size: 280%;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  z-index: -1;
+  transition: height ease-out 350ms, opacity ease-out 350ms;
+}
