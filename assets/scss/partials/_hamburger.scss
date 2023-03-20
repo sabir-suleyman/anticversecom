@@ -1,6 +1,7 @@
 @use "../colors";
 @use "../overflows";
 @use "../gradients";
+@use "../variables";
 
 #hamburger-container {
   display: inline-flex;
@@ -95,6 +96,17 @@
   opacity: 1 !important;
 }
 
+.visible {
+  visibility: visible !important;
+  opacity: 1 !important;
+  transition: opacity ease-out 450ms;
+  @for $i from 1 through 4 {
+    &:nth-of-type(#{$i}) {
+      transition-delay: ($i * 150ms);
+    }
+  }
+}
+
 #menu {
   height: 0;
   opacity: 0;
@@ -103,7 +115,32 @@
   background-size: 280%;
   position: absolute;
   width: 100%;
-  top: 0;
-  z-index: -1;
-  transition: height ease-out 350ms, opacity ease-out 350ms;
+  transition: height ease-out 250ms, opacity ease-out 250ms;
+
+  box-sizing: border-box;
+  padding: variables.$site-lr-padding300 * 0.3 variables.$site-lr-padding300 !important;
+  @include overflows.mx_width800 {
+    padding: variables.$site-lr-padding200 * 0.3 variables.$site-lr-padding200 !important;
+  }
+  @include overflows.mx_width1200 {
+    padding: variables.$site-lr-padding * 0.3 variables.$site-lr-padding !important;
+  }
+
+  .menu-nav {
+    margin-top: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    .menu-navitem {
+      opacity: 0;
+      visibility: hidden;
+      margin-bottom: 0.5em;
+
+      &:after {
+        content: "↩";
+        margin-left: 0.5em;
+      }
+    }
+  }
 }
