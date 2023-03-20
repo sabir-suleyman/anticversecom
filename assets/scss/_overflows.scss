@@ -1,5 +1,13 @@
 @mixin mx_width1200 {
-  @media screen and (min-width: 1200px){
+  @media screen and (min-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin mx_width300 {
+  // Cihaz viewport genişliği 300 piksele eşit veya büyükse...
+  // width >= 300px
+  @media screen and (min-width: 300px) {
     @content;
   }
 }
