@@ -61,8 +61,15 @@
       flex-grow: 1;
 
       img {
-        height: 70px;
-        width: 70px;
+        height: 50px;
+
+        @include overflows.mx_width800 {
+          height: 70px;
+        }
+
+        @include overflows.mx_width1200 {
+          height: 80px;
+        }
       }
     }
 
