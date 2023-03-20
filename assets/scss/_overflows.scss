@@ -1,0 +1,5 @@
+@mixin mx_width1200 {
+  @media screen and (min-width: 1200px){
+    @content;
+  }
+}
