@@ -78,7 +78,7 @@
     }
 
     #navbar  {
-      display: flex;
+      display: none;
       flex-basis: 0;
       flex-grow: 1;
       justify-content: flex-end;
@@ -96,6 +96,10 @@
         a {
           color: colors.$cl-them100;
         }
+      }
+
+      @include overflows.mx_width1200 {
+        display: flex;
       }
     }
   }
