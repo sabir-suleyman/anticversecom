@@ -149,4 +149,12 @@
       }
     }
   }
+
+  @include overflows.mx_width1200 {
+    // 800 pikselin üzerine çıkılıp, hamburger menü ikonu saklandığı zaman
+    // eğer .active class'ı halen duruyorsa media query'si ile önüne geç
+    // Hedef: viewport >= 800px iken #menu açıksa bile görülmemeli
+    height: 0 !important;
+    opacity: 0 !important;
+  }
 }
