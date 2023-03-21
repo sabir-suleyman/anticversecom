@@ -31,7 +31,11 @@
     font-weight: 400;
 
     a {
-      margin-right: 2em;
+      margin-right: 1em;
+
+      img {
+        width: clamp(30px, 1vw, 100px);
+      }
 
       &:last-of-type {
         margin-right: 0;
@@ -40,6 +44,7 @@
 
     &:last-of-type {
       display: inline-flex;
+      align-items: center;
     }
 
     @include overflows.mx_width800 {
