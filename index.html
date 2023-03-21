@@ -8,6 +8,7 @@
     <link href="assets/css/view/index.css" rel="stylesheet" type="text/css">
     <link href="assets/css/components/button.css" rel="stylesheet" type="text/css">
     <link href="assets/css/components/cards.css" rel="stylesheet" type="text/css">
+    <script src="assets/js/main.js" defer></script>
     <title>Anticverse</title>
 </head>
 
@@ -27,9 +28,25 @@
             <li class="navitem"><a href="about.html">About</a></li>
             <li class="navitem"><a href="contact.html">Contact</a></li>
         </ul>
+        <div id="hamburger-container">
+            <div class="menu-icon no-highlight">
+                <input class="menu-icon-input" type="checkbox"/>
+                <div>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
     </section>
 </header>
-
+<aside id="menu">
+    <nav class="menu-nav">
+        <a href="#" class="menu-navitem">Home</a>
+        <a href="projects.html" class="menu-navitem">Projects</a>
+        <a href="about.html" class="menu-navitem">About</a>
+        <a href="contact.html" class="menu-navitem">Contact</a>
+    </nav>
+</aside>
 <main>
     <section id="showcase">
         <video src="assets/media/index/poster.webm" autoplay muted loop></video>
