@@ -23,7 +23,15 @@
 
   h1 {
     margin: 0 0 20px 0;
-    font-size: 80px;
+    font-size: variables.$site-generic-heading300;
+
+    @include overflows.mx_width800 {
+      font-size: variables.$site-generic-heading200;
+    }
+
+    @include overflows.mx_width1200 {
+      font-size: variables.$site-generic-heading100;
+    }
   }
 
   p {
