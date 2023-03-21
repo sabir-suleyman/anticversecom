@@ -5,6 +5,7 @@
 
 @use "fonts";
 @use "variables";
+@use "overflows";
 
 @use "partials/header";
 @use "partials/footer";
@@ -72,7 +73,16 @@ img {
   flex-direction: column;
   justify-content: center;
 
-  padding-left: variables.$site-lr-padding * 2;
+  padding-left: variables.$site-lr-padding300 * 2;
+
+  @include overflows.mx_width800 {
+    padding-left: variables.$site-lr-padding200 * 2;
+  }
+
+  @include overflows.mx_width1200 {
+    padding-left: variables.$site-lr-padding * 2;
+  }
+
 
   height: variables.$index-showcase-height;
 
