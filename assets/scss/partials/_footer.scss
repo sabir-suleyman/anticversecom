@@ -16,7 +16,7 @@
   color: colors.$cl-light100;
   background: colors.$cl-dark500;
 
-  padding: variables.$site-lr-padding300 variables.$site-lr-padding300 * 2;
+  padding: variables.$site-lr-padding300;
 
   @include overflows.mx_width800 {
     padding: math.div(variables.$site-lr-padding200, 2) variables.$site-lr-padding200 * 2;
