@@ -6,15 +6,32 @@
 @use "sass:math";
 @use "../variables";
 @use "../fonts";
+@use "../overflows";
 
 .content {
-  padding: math.div(variables.$site-lr-padding, 2) variables.$site-lr-padding * 2;
+  padding: variables.$site-lr-padding300 * 3 variables.$site-lr-padding300 * 2;
+
+  @include overflows.mx_width800 {
+    padding: variables.$site-lr-padding200 * 2 variables.$site-lr-padding200 * 2;
+  }
+
+  @include overflows.mx_width1200 {
+    padding: variables.$site-lr-padding variables.$site-lr-padding * 2;
+  }
 
   text-align: center;
 
   h1 {
     margin: 0 0 20px 0;
-    font-size: 80px;
+    font-size: variables.$site-generic-heading300;
+
+    @include overflows.mx_width800 {
+      font-size: variables.$site-generic-heading200;
+    }
+
+    @include overflows.mx_width1200 {
+      font-size: variables.$site-generic-heading100;
+    }
   }
 
   p {
