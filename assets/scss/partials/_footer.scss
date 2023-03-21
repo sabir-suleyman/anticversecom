@@ -27,7 +27,7 @@
   }
 
   nav {
-    display: inline-flex;
+    display: none;
     font-weight: 400;
 
     a {
@@ -35,6 +35,18 @@
 
       &:last-of-type {
         margin-right: 0;
+      }
+    }
+
+    &:last-of-type {
+      display: inline-flex;
+    }
+
+    @include overflows.mx_width800 {
+      display: inline-flex;
+
+      &:last-of-type {
+        display: none;
       }
     }
   }
