@@ -142,6 +142,21 @@
       &:after {
         content: "↩";
         margin-left: 0.5em;
+        transition: margin 150ms ease-in, color 150ms ease-in;
+      }
+
+      &:hover {
+        &:after {
+          color: colors.$cl-them100;
+          margin-left: 0.1em;
+        }
+      }
+
+      &:active {
+        color: colors.$cl-them100;
+        &:after {
+          content: "↗";
+        }
       }
     }
 
