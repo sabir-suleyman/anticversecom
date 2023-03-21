@@ -36,6 +36,12 @@ body {
   color: white;
 }
 
+.state-menu_open {
+  height: 100vh;
+  height: 100svh;
+  overflow-y: hidden;
+}
+
 a, .no-highlight {
   -webkit-tap-highlight-color: transparent;
   -webkit-touch-callout: none;
