@@ -137,16 +137,20 @@
       opacity: 0;
       visibility: hidden;
       margin-bottom: 0.5em;
-
       font-size: 20px;
-
-      @include overflows.mx_width800 {
-        font-size: 30px;
-      }
 
       &:after {
         content: "↩";
         margin-left: 0.5em;
+      }
+    }
+
+    @include overflows.mx_width800 {
+      // .menu-nav yukarıdan 180px aşağıda başlasın
+      margin-top: 160px;
+
+      .menu-navitem {
+        font-size: 30px;
       }
     }
   }
