@@ -7,8 +7,6 @@ $px_heading1: 50px;
 $px_heading2: 17.5px;
 $px_text: 16px;
 
-$images: "../../media/legion/emg.webp", "../../media/legion/bag.webp", "../../media/legion/abd.webp", "../../media/legion/cek.webp", "../../media/legion/cmc.webp", "../../media/legion/erg.webp", "../../media/legion/fyb.webp", "../../media/legion/ond.webp", "../../media/legion/org.webp", "../../media/legion/ozo.webp", "../../media/legion/tad.webp";
-
 #showcase {
   video {
     filter: brightness(0.5) saturate(1.5);
@@ -53,16 +51,6 @@ $images: "../../media/legion/emg.webp", "../../media/legion/bag.webp", "../../me
 
 #sec-details {
   background: colors.$cl-dark400;
-}
-
-#sec-legion {
-  .person {
-    @for $i from 1 through 11 {
-      &:nth-of-type(#{$i}) {
-        background: url(nth($images, $i));
-      }
-    }
-  }
 }
 
 #sec-join-us {
