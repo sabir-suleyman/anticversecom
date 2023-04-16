@@ -4,8 +4,21 @@ $pad-between-showcase: 30px;
 
 #showcase {
   img {
+    height: 100svh;
     filter: brightness(0.5) saturate(1.5);
   }
+
+  height: 100svh;
+}
+
+#footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  background: transparent;
+  border-top: solid 1px rgba(255, 255, 255, 0.25);
 }
 
 .project {
