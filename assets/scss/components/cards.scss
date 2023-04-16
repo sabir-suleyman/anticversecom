@@ -132,6 +132,9 @@ $card-size: 300px;
     box-sizing: border-box;
     padding: $card-padding;
     z-index: 0;
+    transition: background-size 150ms ease-in;
+    background-size: 100%;
+    background-position: center;
 
     display: flex;
     flex-direction: column;
@@ -187,11 +190,37 @@ $card-size: 300px;
     &:after {
       content: "";
       width: $card-size;
-      height: $card-size;
+      height: 85px;
       position: absolute;
-      backdrop-filter: brightness(0.6);
+      background: linear-gradient(to bottom, #00000002 0%, #00000099 15%, #000000F0 100%);
       z-index: -1;
       margin: -1 * $card-padding;
     }
+
+    &:hover {
+      background-size: 120%;
+    }
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
