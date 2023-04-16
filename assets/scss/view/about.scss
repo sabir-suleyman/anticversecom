@@ -2,6 +2,7 @@
 @use "../variables";
 @use "../colors";
 @use "../fonts";
+@use "../overflows";
 
 $px_heading1: 50px;
 $px_heading2: 17.5px;
@@ -14,7 +15,15 @@ $px_text: 16px;
 }
 
 #sec-wrw, #sec-details, #sec-legion {
-  padding: $px_heading1 variables.$site-lr-padding * 2;
+  padding: variables.$site-lr-padding300 * 3 variables.$site-lr-padding300 * 2;
+
+  @include overflows.mx_width800 {
+    padding: variables.$site-lr-padding200 * 2 variables.$site-lr-padding200 * 2;
+  }
+
+  @include overflows.mx_width1200 {
+    padding: variables.$site-lr-padding variables.$site-lr-padding * 2;
+  }
 }
 
 #sec-wrw, #sec-details {

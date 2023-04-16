@@ -128,7 +128,12 @@ $card-size: 300px;
   justify-content: space-around;
 
   .person {
-    margin: 0 math.div($card-size, 10) math.div($card-size, 10)  0;
+    margin-bottom: math.div($card-size, 10);
+
+    @include overflows.mx_width800 {
+      margin: 0 math.div($card-size, 10) math.div($card-size, 10)  0;
+    }
+
     box-sizing: border-box;
     padding: $card-padding;
     z-index: 0;
