@@ -7,7 +7,7 @@ $px_heading1: 50px;
 $px_heading2: 17.5px;
 $px_text: 16px;
 
-$images: "../../media/legion/emg.webp", "../../media/legion/bag.webp", "../../media/legion/abd.webp", "../../media/legion/cek.webp", "../../media/legion/cmc.webp", "../../media/legion/erg.webp", "../../media/legion/fyb.webp", "../../media/legion/mua.webp", "../../media/legion/ond.webp", "../../media/legion/org.webp", "../../media/legion/ozo.webp", "../../media/legion/tad.webp";
+$images: "../../media/legion/emg.webp", "../../media/legion/bag.webp", "../../media/legion/abd.webp", "../../media/legion/cek.webp", "../../media/legion/cmc.webp", "../../media/legion/erg.webp", "../../media/legion/fyb.webp", "../../media/legion/ond.webp", "../../media/legion/org.webp", "../../media/legion/ozo.webp", "../../media/legion/tad.webp";
 
 #showcase {
   video {
@@ -57,7 +57,7 @@ $images: "../../media/legion/emg.webp", "../../media/legion/bag.webp", "../../me
 
 #sec-legion {
   .person {
-    @for $i from 1 through 12 {
+    @for $i from 1 through 11 {
       &:nth-of-type(#{$i}) {
         background: url(nth($images, $i));
       }
