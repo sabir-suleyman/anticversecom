@@ -8,6 +8,7 @@ const personvideoArr
     = document.querySelectorAll(".person-video")
 
 function addListener($el) {
+    $el.playbackRate = 1.5;
     $el.addEventListener("mouseover", function (){
         $el.play();
     });
