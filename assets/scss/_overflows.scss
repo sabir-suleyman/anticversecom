@@ -10,6 +10,14 @@
   }
 }
 
+@mixin mx_width500 {
+  // Cihaz viewport genişliği 500 piksele eşit veya büyükse...
+  // width >= 500px
+  @media screen and (min-width: 500px) {
+    @content;
+  }
+}
+
 @mixin mx_width300 {
   // Cihaz viewport genişliği 300 piksele eşit veya büyükse...
   // width >= 300px
