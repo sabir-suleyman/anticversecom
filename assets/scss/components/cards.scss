@@ -223,9 +223,9 @@ $cl-legion: #F60000;
     align-items: center;
 
     position: relative;
-    padding: 10px 20px;
+    padding: 20px;
 
-    border-radius: 30px;
+    border-radius: 40px;
     background: #212121;
     box-shadow: 15px 15px 20px #191919,
                 -15px -15px 20px #282828;
@@ -234,7 +234,7 @@ $cl-legion: #F60000;
     box-sizing: border-box;
 
     .person-video {
-      border-radius: 15px;
+      border-radius: 20px;
       object-fit: cover;
       width: 100%;
       height: 150px;
@@ -246,24 +246,20 @@ $cl-legion: #F60000;
       top: -30px;
 
       h1, h2 {
-        margin: 0;
-        font: 400 20px fonts.$font-stack;
-
-        span {
-          font-weight: 600;
-        }
+        margin: 0 !important;
+        font: 400 20px fonts.$font-stack !important;
       }
 
       h2 {
-        &[data-type="senato"] {
+        &[data-style="senato"] {
           color: $cl-senato;
         }
 
-        &[data-type="leader"] {
+        &[data-style="leader"] {
           color: $cl-leader;
         }
 
-        &[data-type="legion"] {
+        &[data-style="legion"] {
           color: $cl-legion;
         }
       }
@@ -300,6 +296,28 @@ $cl-legion: #F60000;
 
       .logo-github, .logo-instagram, .logo-linkedin {
         background-size: contain;
+      }
+    }
+
+    @include overflows.mx_width500 {
+      width: clamp(300px, 100%, 500px);
+      flex-direction: row;
+
+      .person-video {
+        width: 150px;
+        height: 150px;
+      }
+
+      .person-text-area {
+        margin: 10px;
+        position: unset;
+      }
+
+      .person-nav {
+        place-self: flex-end;
+        position: absolute;
+        top: unset;
+        left: 180px;
       }
     }
   }
