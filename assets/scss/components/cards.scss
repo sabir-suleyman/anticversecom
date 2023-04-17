@@ -217,6 +217,8 @@ $cl-legion: #F60000;
   display: flex;
   flex-direction: column;
   align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 
   .person {
     display: flex;
@@ -231,6 +233,7 @@ $cl-legion: #F60000;
     box-shadow: 15px 15px 20px #191919,
                 -15px -15px 20px #282828;
 
+    margin: variables.$site-lr-padding300;
     width: clamp(230px, 100%, 300px);
     box-sizing: border-box;
 
@@ -301,7 +304,7 @@ $cl-legion: #F60000;
     }
 
     @include overflows.mx_width500 {
-      width: clamp(300px, 100%, 500px);
+      width: clamp(300px, 100%, 450px);
       flex-direction: row;
 
       .person-video {
@@ -321,16 +324,10 @@ $cl-legion: #F60000;
         left: 180px;
       }
     }
+  }
 
-    margin: variables.$site-lr-padding300;
-
-    @include overflows.mx_width800 {
-      margin: math.div(variables.$site-lr-padding200, 2);
-    }
-
-    @include overflows.mx_width1200 {
-
-    }
+  @include overflows.mx_width500 {
+    flex-direction: row;
   }
 }
 
