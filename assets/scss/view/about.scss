@@ -26,14 +26,10 @@ $px_text: 16px;
   }
 }
 
-#sec-wrw, #sec-details {
+#sec-wrw, #sec-details, #sec-legion {
   h1 {
     margin: math.div($px_heading1, 2) 0 math.div($px_heading1, 4) 0;
     font: 600 $px_heading1 fonts.$font-stack;
-
-    span {
-      color: colors.$cl-them200;
-    }
   }
 
   h2 {
@@ -65,4 +61,8 @@ $px_text: 16px;
 #sec-join-us {
   background: -webkit-linear-gradient(to top, #c31432, #240b36);
   background: linear-gradient(to top, #c31432, #240b36);
+}
+
+#sec-legion {
+  background: #212121;
 }
