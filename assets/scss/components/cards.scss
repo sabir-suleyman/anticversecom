@@ -124,6 +124,10 @@ $cl-senato: #EB00FF;
 $cl-leader: #00FFE0;
 $cl-legion: #F60000;
 
+$cl-senate-shadow: rgba(251, 204, 255, 0.1);
+$cl-leader-shadow: rgba(204, 255, 250, 0.1);
+$cl-legion-shadow: rgba(255, 171, 171, 0.1);
+
 .person-gallery {
   display: flex;
   flex-direction: column;
@@ -140,12 +144,10 @@ $cl-legion: #F60000;
     padding: 20px;
 
     border-radius: 40px;
-    background: #212121;
-    box-shadow: 15px 15px 20px #191919,
-                -15px -15px 20px #282828;
+    background: linear-gradient(145deg, #262626, #1A1A1A);
     transition: box-shadow 350ms ease-in-out;
 
-    margin: variables.$site-lr-padding300 0;
+    margin: variables.$site-lr-padding variables.$site-lr-padding300;
     width: clamp(235px, 30%, 300px);
 
     .person-video {
@@ -163,20 +165,6 @@ $cl-legion: #F60000;
       h1, h2 {
         margin: 0 !important;
         font: 400 20px fonts.$font-stack !important;
-      }
-
-      h2 {
-        &[data-style="senato"] {
-          color: $cl-senato;
-        }
-
-        &[data-style="leader"] {
-          color: $cl-leader;
-        }
-
-        &[data-style="legion"] {
-          color: $cl-legion;
-        }
       }
     }
 
@@ -210,10 +198,53 @@ $cl-legion: #F60000;
         }
       }
     }
+  }
 
-    &:hover {
-      box-shadow: 15px 15px 20px #282828,
-                  -15px -15px 20px #191919;
+  &[data-style="senate"] {
+    .person {
+      box-shadow: 10px 10px 20px #101010,
+      -10px -10px 20px $cl-senate-shadow;
+
+      &:hover {
+        box-shadow: 10px 10px 20px $cl-senate-shadow,
+                    -10px -10px 20px #101010;
+      }
+
+      .person-text-area h2 {
+        color: $cl-senato;
+      }
+    }
+  }
+
+  &[data-style="leader"] {
+    .person {
+      box-shadow: 10px 10px 20px #101010,
+      -10px -10px 20px $cl-leader-shadow;
+
+      &:hover {
+        box-shadow: 10px 10px 20px $cl-leader-shadow,
+                    -10px -10px 20px #101010;
+      }
+
+      .person-text-area h2 {
+        color: $cl-leader;
+      }
+    }
+  }
+
+  &[data-style="legion"] {
+    .person {
+      box-shadow: 10px 10px 20px #101010,
+      -10px -10px 20px $cl-legion-shadow;
+
+      &:hover {
+        box-shadow: 10px 10px 20px $cl-legion-shadow,
+                    -10px -10px 20px #101010;
+      }
+
+      .person-text-area h2 {
+        color: $cl-legion;
+      }
     }
   }
 
