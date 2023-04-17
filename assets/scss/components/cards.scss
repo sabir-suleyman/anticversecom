@@ -120,100 +120,11 @@ $logo-height: 80px;
   }
 }
 
-$card-padding: 12px;
-$card-size: 300px;
-
-.person-gallery {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-
-  .person {
-    margin-bottom: math.div($card-size, 10);
-
-    @include overflows.mx_width800 {
-      margin: 0 math.div($card-size, 10) math.div($card-size, 10)  0;
-    }
-
-    box-sizing: border-box;
-    padding: $card-padding;
-    z-index: 0;
-    transition: background-size 150ms ease-in;
-    background-size: 100%;
-    background-position: center;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-
-    width: $card-size;
-    height: $card-size;
-    border-radius: 15px;
-
-    h1 {
-      margin: 0;
-      font-size: 18px;
-    }
-
-    h2 {
-      margin: 0;
-      font-size: 12px;
-      color: colors.$cl-them100;
-    }
-
-    nav {
-      display: inline-flex;
-      margin: math.div($card-padding, 2) 0 0 0;
-
-      a {
-        display: block;
-        margin: 0 math.div($card-padding, 2) 0 0;
-        width: 20px;
-        height: 20px;
-
-        &:last-of-type {
-          margin: 0;
-        }
-      }
-
-      .logo-linkedin {
-        background: url("../../media/logos/linkedin.webp");
-      }
-
-      .logo-instagram {
-        background: url("../../media/logos/instagram.svg");
-      }
-
-      .logo-github {
-        background: url("../../media/logos/github.svg");
-      }
-
-      .logo-github, .logo-instagram, .logo-linkedin {
-        background-size: contain;
-      }
-    }
-
-    &:after {
-      content: "";
-      width: $card-size;
-      height: 85px;
-      position: absolute;
-      background: linear-gradient(to bottom, #00000002 0%, #00000099 15%, #000000F0 100%);
-      z-index: -1;
-      margin: -1 * $card-padding;
-    }
-
-    &:hover {
-      background-size: 120%;
-    }
-  }
-}
-
 $cl-senato: #EB00FF;
 $cl-leader: #00FFE0;
 $cl-legion: #F60000;
 
-.person-gallery2 {
+.person-gallery {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -280,26 +191,23 @@ $cl-legion: #F60000;
         margin: 0 10px 0 0;
         width: 20px;
         height: 20px;
+        background-size: contain;
 
         &:last-of-type {
           margin: 0;
         }
-      }
 
-      .logo-linkedin {
-        background: url("../../media/logos/linkedin.webp");
-      }
+        &[data-icon="logo-linkedin"] {
+          background-image: url("../../media/logos/linkedin.webp");
+        }
 
-      .logo-instagram {
-        background: url("../../media/logos/instagram.svg");
-      }
+        &[data-icon="logo-instagram"] {
+          background-image: url("../../media/logos/instagram.svg");
+        }
 
-      .logo-github {
-        background: url("../../media/logos/github.svg");
-      }
-
-      .logo-github, .logo-instagram, .logo-linkedin {
-        background-size: contain;
+        &[data-icon="logo-github"] {
+          background-image: url("../../media/logos/github.svg");
+        }
       }
     }
 
