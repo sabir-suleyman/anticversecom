@@ -6,6 +6,7 @@
 @use "fonts";
 @use "variables";
 @use "overflows";
+@use "colors";
 
 @use "partials/header";
 @use "partials/footer";
@@ -74,6 +75,18 @@ img {
   block-size: auto;
 }
 
+h1 {
+  span {
+    &[data-style="bold"] {
+      font-weight: 600;
+    }
+
+    &[data-style="colored"] {
+      color: colors.$cl-them200;
+    }
+  }
+}
+
 #showcase {
   display: flex;
   flex-direction: column;
@@ -107,10 +120,6 @@ img {
     margin: 0;
     font: 300 40px fonts.$font-stack;
     letter-spacing: -2px;
-
-    span {
-      font-weight: 600;
-    }
   }
 
   h2 {
