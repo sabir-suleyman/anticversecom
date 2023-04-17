@@ -235,7 +235,7 @@ $cl-legion: #F60000;
     transition: box-shadow 350ms ease-in-out;
 
     margin: variables.$site-lr-padding300 0;
-    width: clamp(230px, 100%, 300px);
+    width: clamp(235px, 30%, 300px);
 
     .person-video {
       border-radius: 20px;
@@ -314,7 +314,7 @@ $cl-legion: #F60000;
 
     .person {
       margin: variables.$site-lr-padding300;
-      width: clamp(300px, 35%, 450px);
+      width: clamp(300px, 75%, 450px);
       flex-direction: row;
 
       .person-video {
@@ -333,6 +333,12 @@ $cl-legion: #F60000;
         top: unset;
         left: 180px;
       }
+    }
+  }
+
+  @include overflows.mx_width1000 {
+    .person {
+      width: clamp(300px, 35%, 450px);
     }
   }
 }
