@@ -280,26 +280,23 @@ $cl-legion: #F60000;
         margin: 0 10px 0 0;
         width: 20px;
         height: 20px;
+        background-size: contain;
 
         &:last-of-type {
           margin: 0;
         }
-      }
 
-      .logo-linkedin {
-        background: url("../../media/logos/linkedin.webp");
-      }
+        &[data-icon="logo-linkedin"] {
+          background-image: url("../../media/logos/linkedin.webp");
+        }
 
-      .logo-instagram {
-        background: url("../../media/logos/instagram.svg");
-      }
+        &[data-icon="logo-instagram"] {
+          background-image: url("../../media/logos/instagram.svg");
+        }
 
-      .logo-github {
-        background: url("../../media/logos/github.svg");
-      }
-
-      .logo-github, .logo-instagram, .logo-linkedin {
-        background-size: contain;
+        &[data-icon="logo-github"] {
+          background-image: url("../../media/logos/github.svg");
+        }
       }
     }
 
