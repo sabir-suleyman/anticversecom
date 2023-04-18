@@ -302,16 +302,17 @@ $inner-shadow-dark: #090909;
       }
 
       .person-nav {
+        margin: 10px;
         place-self: flex-end;
         position: absolute;
         top: unset;
-        left: 182px;
+        left: 172px;
       }
     }
 
     &[data-style="legion"] {
       .person .person-video {
-        height: 100px;
+        height: 120px;
       }
     }
   }
