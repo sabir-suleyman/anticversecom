@@ -319,10 +319,15 @@ $inner-shadow-dark: #090909;
     &[data-style="legion"] {
       .person {
         width: clamp(300px, 75%, 400px);
-      }
 
-      .person .person-video {
-        height: 120px;
+        .person-video {
+          width: 120px;
+          height: 120px;
+        }
+
+        .person-nav {
+          left: 142px;
+        }
       }
     }
   }
