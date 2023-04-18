@@ -124,9 +124,15 @@ $cl-senato: #EB00FF;
 $cl-leader: #00FFE0;
 $cl-legion: #F60000;
 
-$cl-senate-shadow: rgba(251, 204, 255, 0.1);
-$cl-leader-shadow: rgba(204, 255, 250, 0.1);
-$cl-legion-shadow: rgba(255, 171, 171, 0.1);
+$cl-senate-shadow: rgba(244, 128, 255, 0.1);
+$cl-leader-shadow: rgba(128, 255, 242, 0.1);
+$cl-legion-shadow: rgba(255, 128, 128, 0.1);
+
+$blur: 10px;
+$spread: 10px;
+$transition: 350ms;
+$outer-shadow-dark: #090909;
+$inner-shadow-dark: #090909;
 
 .person-gallery {
   display: flex;
@@ -144,11 +150,11 @@ $cl-legion-shadow: rgba(255, 171, 171, 0.1);
     padding: 20px;
 
     border-radius: 40px;
-    background: linear-gradient(145deg, #262626, #1A1A1A);
-    transition: box-shadow 350ms ease-in-out;
+    transition: box-shadow $transition ease-in-out, background-color $transition ease-in-out;
 
-    margin: variables.$site-lr-padding variables.$site-lr-padding300;
+    margin: clamp(30px, 5vh, 60px) 0;
     width: clamp(235px, 30%, 300px);
+    z-index: 0;
 
     .person-video {
       border-radius: 20px;
@@ -198,16 +204,40 @@ $cl-legion-shadow: rgba(255, 171, 171, 0.1);
         }
       }
     }
-  }
+
+    &:before {
+      content: "";
+      border-radius: 40px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      opacity: 0;
+      transition: opacity $transition linear;
+      z-index: -1;
+    }
+
+    &:hover {
+      &:before {
+        opacity: 1;
+      }
+    }
+  } // End of class: .person
 
   &[data-style="senate"] {
     .person {
-      box-shadow: 10px 10px 20px #101010,
-      -10px -10px 20px $cl-senate-shadow;
+      background: linear-gradient(145deg, $inner-shadow-dark, $cl-senate-shadow);
+      box-shadow: $spread $spread $blur $outer-shadow-dark,
+                  -1 * $spread -1 * $spread $blur $cl-senate-shadow;
+
+      &:before {
+        background: linear-gradient(300deg, $inner-shadow-dark, $cl-senate-shadow);
+      }
 
       &:hover {
-        box-shadow: 10px 10px 20px $cl-senate-shadow,
-                    -10px -10px 20px #101010;
+        box-shadow: $spread $spread $blur $cl-senate-shadow,
+                    -1 * $spread -1 * $spread $blur $outer-shadow-dark;
       }
 
       .person-text-area h2 {
@@ -218,12 +248,17 @@ $cl-legion-shadow: rgba(255, 171, 171, 0.1);
 
   &[data-style="leader"] {
     .person {
-      box-shadow: 10px 10px 20px #101010,
-      -10px -10px 20px $cl-leader-shadow;
+      background: linear-gradient(145deg, $inner-shadow-dark, $cl-leader-shadow);
+      box-shadow: $spread $spread $blur $outer-shadow-dark,
+                  -1 * $spread -1 * $spread $blur $cl-leader-shadow;
+
+      &:before {
+        background: linear-gradient(300deg, $inner-shadow-dark, $cl-leader-shadow);
+      }
 
       &:hover {
-        box-shadow: 10px 10px 20px $cl-leader-shadow,
-                    -10px -10px 20px #101010;
+        box-shadow: $spread $spread $blur $cl-leader-shadow,
+                    -1 * $spread -1 * $spread $blur $outer-shadow-dark;
       }
 
       .person-text-area h2 {
@@ -234,12 +269,12 @@ $cl-legion-shadow: rgba(255, 171, 171, 0.1);
 
   &[data-style="legion"] {
     .person {
-      box-shadow: 10px 10px 20px #101010,
-      -10px -10px 20px $cl-legion-shadow;
+      box-shadow: $spread $spread $blur #101010,
+                  -1 * $spread -1 * $spread $blur $cl-legion-shadow;
 
       &:hover {
-        box-shadow: 10px 10px 20px $cl-legion-shadow,
-                    -10px -10px 20px #101010;
+        box-shadow: $spread $spread $blur $cl-legion-shadow,
+                    -1 * $spread -1 * $spread $blur #101010;
       }
 
       .person-text-area h2 {
@@ -252,7 +287,7 @@ $cl-legion-shadow: rgba(255, 171, 171, 0.1);
     flex-direction: row;
 
     .person {
-      margin: variables.$site-lr-padding300;
+      margin: clamp(25px, 5vh, 50px) clamp(10px, 5vw, 20px);
       width: clamp(300px, 75%, 450px);
       flex-direction: row;
 
