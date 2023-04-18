@@ -305,7 +305,13 @@ $inner-shadow-dark: #090909;
         place-self: flex-end;
         position: absolute;
         top: unset;
-        left: 180px;
+        left: 182px;
+      }
+    }
+
+    &[data-style="legion"] {
+      .person .person-video {
+        height: 100px;
       }
     }
   }
