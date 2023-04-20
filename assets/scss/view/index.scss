@@ -1,7 +1,7 @@
 //
 //    Anticverse Webraider
 //
-//    Maintainer: Ferit Yiğit BALABAN <balaban.ferityigit@anticverse.com> <fybalaban@fybx.dev>
+//    Maintainer: Ferit Yiğit BALABAN <balaban.ferityigit@anticverse.com>
 
 @use "sass:math";
 @use "../variables";
@@ -48,11 +48,8 @@
 }
 
 #showcase {
-  height: 100vh;
-  height: 100svh;
-
   video {
-    height: 150vh;
+    height: 150vh !important;
     object-fit: cover;
     top: unset;
   }
