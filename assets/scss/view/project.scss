@@ -8,6 +8,7 @@
 @use "../overflows";
 @use "../colors";
 
+//noinspection CssOverwrittenProperties
 .project-showcase {
   display: flex;
   flex-direction: column;
