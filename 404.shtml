@@ -9,13 +9,12 @@
   <link rel="manifest" href="/site.webmanifest">
 
   <link href="assets/css/main.css" rel="stylesheet" type="text/css">
-  <link href="assets/css/view/404.css" rel="stylesheet" type="text/css">
+
   <script src="assets/js/main.js" defer></script>
   <title>404 | Anticverse</title>
 </head>
 
 <body>
-
 <header id="header">
   <section id="header-upper">
     <a href="mailto:info@anticverse.com">info@anticverse.com</a>
@@ -25,7 +24,7 @@
     <div id="img-container"><img alt="logo" src="assets/media/header_logo.svg"></div>
     <h1>Anticverse</h1>
     <ul id="navbar">
-      <li class="navitem navitem-select"><a href="#">Home</a></li>
+      <li class="navitem"><a href="index.html">Home</a></li>
       <li class="navitem"><a href="projects.html">Projects</a></li>
       <li class="navitem"><a href="about.html">About</a></li>
       <li class="navitem"><a href="contact.html">Contact</a></li>
@@ -41,6 +40,7 @@
     </div>
   </section>
 </header>
+
 <aside id="menu">
   <nav class="menu-nav">
     <a href="#" class="menu-navitem">Home</a>
@@ -49,15 +49,16 @@
     <a href="contact.html" class="menu-navitem">Contact</a>
   </nav>
 </aside>
+
 <main>
-  <section id="showcase">
+  <section id="showcase" data-style="fullscreen">
     <video src="assets/media/404/showcase.webm" autoplay muted loop></video>
     <h1>Four hundred, <span>four?</span></h1>
     <h2>Looks like you've taken the wrong pill, Neo. The page you're looking for doesn't exist in this reality. Try going back or finding a different path to escape this Matrix trap.</h2>
   </section>
 </main>
 
-<footer id="footer">
+<footer id="footer" data-style="fullscreen">
   <nav>
     <a href="https://instagram.com/anticverse" target="_blank">Instagram</a>
     <a href="https://linkedin.com/company/anticverse" target="_blank">LinkedIn</a>
@@ -78,6 +79,5 @@
   </nav>
   <h1>&copy; 2023 <span>Anticverse</span>, all rights reserved.</h1>
 </footer>
-
 </body>
 </html>
