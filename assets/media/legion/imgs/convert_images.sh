@@ -4,7 +4,7 @@
 #       Maintainer from Anticverse Webraider
 #
 
-for file in *.jpeg
+for file in *.PNG
 do 
-    convert "$file" -resize 300x300^ -gravity center -extent 300x300 -quality 80 "${file%.*}.webp"
+    convert "$file" -resize 150x150^ -gravity center -extent 150x150 -quality 100 "${file%.*}.webp"
 done
