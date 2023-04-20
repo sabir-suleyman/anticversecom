@@ -4,6 +4,9 @@
 //    Maintainer: Ferit Yiğit BALABAN <balaban.ferityigit@anticverse.com>
 
 @use "../fonts";
+@use "../variables";
+@use "../overflows";
+@use "../colors";
 
 .project-showcase {
   display: flex;
@@ -41,3 +44,29 @@
     width: clamp(55px, 5vw, 85px);
   }
 }
+
+.project-narrative {
+  position: relative;
+  background-color: #191919;
+  padding: variables.$site-lr-padding300 * 3 variables.$site-lr-padding300 * 2;
+
+  @include overflows.mx_width800 {
+    padding: variables.$site-lr-padding200 * 2 variables.$site-lr-padding200 * 2;
+  }
+
+  @include overflows.mx_width1200 {
+    padding: variables.$site-lr-padding variables.$site-lr-padding * 2;
+  }
+
+  .p-n-background {
+    width: 100%;
+    height: -webkit-fill-available;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    filter: brightness(0.5) saturate(1.5);
+  }
+}
+
