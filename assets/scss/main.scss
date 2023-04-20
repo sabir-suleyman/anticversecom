@@ -128,13 +128,15 @@ h1 {
     font: 300 18px fonts.$font-stack;
   }
 
+  //noinspection CssOverwrittenProperties
   &[data-style="fullscreen"] {
     video, img {
-      object-fit: unset;
+      height: 100vh;
       height: 100svh;
       filter: brightness(0.5) saturate(1.5);
     }
 
+    height: 100vh;
     height: 100svh;
   }
 }
