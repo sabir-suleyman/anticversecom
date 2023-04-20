@@ -6,5 +6,5 @@
 
 for file in *.PNG
 do 
-    convert "$file" -resize 150x150^ -gravity center -extent 150x150 -quality 100 "${file%.*}.webp"
+    convert "$file" -resize 150x150^ -gravity center -background none -extent 150x150 -quality 100 "${file%.*}.webp"
 done
