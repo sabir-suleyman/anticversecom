@@ -3,6 +3,10 @@
 //
 //    Maintainer: Ferit Yiğit BALABAN <balaban.ferityigit@anticverse.com>
 @use "../overflows";
+@use "../animations";
+
+$timing-showcase: 3000ms;
+$timing-elements: 2000ms;
 
 #character-orpheus, #character-eurydice {
   display: flex;
@@ -20,4 +24,37 @@
   @include overflows.mx_width500 {
     flex-direction: row-reverse;
   }
+}
+
+.p-s-logo {
+  animation: $timing-showcase slide-down-appear;
+}
+
+.p-s-description {
+  animation: $timing-showcase appear;
+}
+
+.p-s-ecol-logo {
+  animation: $timing-showcase slide-up-appear;
+}
+
+.anim-slide-right-appear, .anim-slide-up-appear, .anim-appear {
+  opacity: 0;
+}
+
+.slide-right-appear, .slide-up-appear, .appear {
+  animation-fill-mode: forwards;
+  opacity: 1;
+}
+
+.slide-right-appear {
+  animation: slide-right-appear $timing-elements;
+}
+
+.slide-up-appear {
+  animation: slide-up-appear $timing-elements;
+}
+
+.appear {
+  animation: appear $timing-elements;
 }
