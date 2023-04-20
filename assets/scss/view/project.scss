@@ -17,6 +17,16 @@
   height: 100vh;
   height: 100svh;
 
+  padding: 0 variables.$site-lr-padding300 * 2;
+
+  @include overflows.mx_width800 {
+    padding: 0 variables.$site-lr-padding200 * 2;
+  }
+
+  @include overflows.mx_width1200 {
+    padding: 0 variables.$site-lr-padding * 2;
+  }
+
   .p-s-background {
     width: 100%;
     position: absolute;
@@ -43,11 +53,9 @@
 
     width: clamp(55px, 5vw, 85px);
   }
-}
+} // End of: .project-showcase
 
-.project-narrative {
-  position: relative;
-  background-color: #191919;
+.project-narrative, .project-creative {
   padding: variables.$site-lr-padding300 * 3 variables.$site-lr-padding300 * 2;
 
   @include overflows.mx_width800 {
@@ -57,6 +65,11 @@
   @include overflows.mx_width1200 {
     padding: variables.$site-lr-padding variables.$site-lr-padding * 2;
   }
+} // End of: .project-narrative & .project-creative
+
+.project-narrative {
+  position: relative;
+  background-color: attr(data-bgcolor, #191919);
 
   .p-n-background {
     width: 100%;
@@ -71,5 +84,4 @@
     z-index: -1;
     filter: brightness(0.5) saturate(1.5);
   }
-}
-
+} // End of: .project-narrative
