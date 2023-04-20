@@ -8,6 +8,7 @@
 @use "../overflows";
 @use "../colors";
 
+//noinspection CssOverwrittenProperties
 .project-showcase {
   display: flex;
   flex-direction: column;
@@ -28,12 +29,12 @@
   }
 
   .p-s-background {
-    width: 100%;
     position: absolute;
     top: 0;
     left: 0;
     z-index: -1;
     height: 100svh;
+    object-fit: cover;
     filter: brightness(0.5) saturate(1.5);
   }
 
@@ -74,9 +75,6 @@
   .p-n-background {
     width: 100%;
     height: 100%;
-    height: -moz-available;
-    height: -webkit-fill-available;
-    height: fill-available;
     object-fit: cover;
     position: absolute;
     top: 0;
