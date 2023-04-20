@@ -1,0 +1,43 @@
+//
+//    Anticverse Webraider
+//
+//    Maintainer: Ferit Yiğit BALABAN <balaban.ferityigit@anticverse.com>
+
+@use "../fonts";
+
+.project-showcase {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  height: 100vh;
+  height: 100svh;
+
+  .p-s-background {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    height: 100svh;
+    filter: brightness(0.5) saturate(1.5);
+  }
+
+  .p-s-logo {
+    width: clamp(485px, 25vw, 600px);
+  }
+
+  .p-s-description {
+    color: white;
+    margin: 30px 0 0 0;
+    font: 300 18px fonts.$font-stack;
+  }
+
+  .p-s-ecol-logo {
+    position: absolute;
+    bottom: 50px;
+
+    width: clamp(55px, 5vw, 85px);
+  }
+}
