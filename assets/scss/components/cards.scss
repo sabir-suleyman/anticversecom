@@ -355,11 +355,45 @@ $inner-shadow-dark: #090909;
   box-shadow: 0 5px 10px 0 $cl-leader;
 }
 
+.card-person-project {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
+  position: relative;
+  padding: 20px 10px;
+  width: 300px;
+  background-color: #191919;
+  border-radius: 20px;
 
+  &:after {
+    content: "";
+    position: absolute;
+    border-radius: 0 0 20px 20px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 20px;
+    background-color: #282828;
+  }
 
+  .c-p-p-name {
+    font: 300 14px fonts.$font-stack;
+  }
+}
 
+.card-person-project-leader {
+  width: 350px;
+  padding: 50px 25px;
 
+  .c-p-p-l-photo {
+    position: absolute;
+    height: 150px;
+    z-index: 1;
+    top: -85px;
+  }
 
-
-
+  .c-p-p-l-name {
+    font: 300 18px fonts.$font-stack;
+  }
+}
