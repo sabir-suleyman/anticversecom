@@ -124,6 +124,16 @@ $cl-senato: #EB00FF;
 $cl-leader: #00FFE0;
 $cl-legion: #F60000;
 
+$cl-senate-shadow: rgba(244, 128, 255, 0.1);
+$cl-leader-shadow: rgba(128, 255, 242, 0.1);
+$cl-legion-shadow: rgba(255, 128, 128, 0.1);
+
+$blur: 10px;
+$spread: 10px;
+$transition: 350ms;
+$outer-shadow-dark: #090909;
+$inner-shadow-dark: #090909;
+
 .person-gallery {
   display: flex;
   flex-direction: column;
@@ -140,13 +150,11 @@ $cl-legion: #F60000;
     padding: 20px;
 
     border-radius: 40px;
-    background: #212121;
-    box-shadow: 15px 15px 20px #191919,
-                -15px -15px 20px #282828;
-    transition: box-shadow 350ms ease-in-out;
+    transition: box-shadow $transition ease-in-out, background-color $transition ease-in-out;
 
-    margin: variables.$site-lr-padding300 0;
+    margin: clamp(30px, 5vh, 60px) 0;
     width: clamp(235px, 30%, 300px);
+    z-index: 0;
 
     .person-video {
       border-radius: 20px;
@@ -163,20 +171,6 @@ $cl-legion: #F60000;
       h1, h2 {
         margin: 0 !important;
         font: 400 20px fonts.$font-stack !important;
-      }
-
-      h2 {
-        &[data-style="senato"] {
-          color: $cl-senato;
-        }
-
-        &[data-style="leader"] {
-          color: $cl-leader;
-        }
-
-        &[data-style="legion"] {
-          color: $cl-legion;
-        }
       }
     }
 
@@ -211,9 +205,81 @@ $cl-legion: #F60000;
       }
     }
 
+    &:before {
+      content: "";
+      border-radius: 40px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      opacity: 0;
+      transition: opacity $transition linear;
+      z-index: -1;
+    }
+
     &:hover {
-      box-shadow: 15px 15px 20px #282828,
-                  -15px -15px 20px #191919;
+      &:before {
+        opacity: 1;
+      }
+    }
+  } // End of class: .person
+
+  &[data-style="senate"] {
+    .person {
+      background: linear-gradient(145deg, $inner-shadow-dark, $cl-senate-shadow);
+      box-shadow: $spread $spread $blur $outer-shadow-dark,
+                  -1 * $spread -1 * $spread $blur $cl-senate-shadow;
+
+      &:before {
+        background: linear-gradient(300deg, $inner-shadow-dark, $cl-senate-shadow);
+      }
+
+      &:hover {
+        box-shadow: $spread $spread $blur $cl-senate-shadow,
+                    -1 * $spread -1 * $spread $blur $outer-shadow-dark;
+      }
+
+      .person-text-area h2 {
+        color: $cl-senato;
+      }
+    }
+  }
+
+  &[data-style="leader"] {
+    .person {
+      background: linear-gradient(145deg, $inner-shadow-dark, $cl-leader-shadow);
+      box-shadow: $spread $spread $blur $outer-shadow-dark,
+                  -1 * $spread -1 * $spread $blur $cl-leader-shadow;
+
+      &:before {
+        background: linear-gradient(300deg, $inner-shadow-dark, $cl-leader-shadow);
+      }
+
+      &:hover {
+        box-shadow: $spread $spread $blur $cl-leader-shadow,
+                    -1 * $spread -1 * $spread $blur $outer-shadow-dark;
+      }
+
+      .person-text-area h2 {
+        color: $cl-leader;
+      }
+    }
+  }
+
+  &[data-style="legion"] {
+    .person {
+      box-shadow: $spread $spread $blur #101010,
+                  -1 * $spread -1 * $spread $blur $cl-legion-shadow;
+
+      &:hover {
+        box-shadow: $spread $spread $blur $cl-legion-shadow,
+                    -1 * $spread -1 * $spread $blur #101010;
+      }
+
+      .person-text-area h2 {
+        color: $cl-legion;
+      }
     }
   }
 
@@ -221,7 +287,7 @@ $cl-legion: #F60000;
     flex-direction: row;
 
     .person {
-      margin: variables.$site-lr-padding300;
+      margin: clamp(25px, 5vh, 50px) clamp(10px, 5vw, 15px);
       width: clamp(300px, 75%, 450px);
       flex-direction: row;
 
@@ -236,28 +302,100 @@ $cl-legion: #F60000;
       }
 
       .person-nav {
+        margin: 10px;
         place-self: flex-end;
         position: absolute;
         top: unset;
-        left: 180px;
+        left: 172px;
+      }
+    }
+
+    &[data-style="senate"] {
+      .person {
+        width: clamp(450px, 75%, 500px);
+      }
+    }
+
+    &[data-style="legion"] {
+      .person {
+        width: clamp(300px, 75%, 400px);
+
+        .person-video {
+          width: 120px;
+          height: 120px;
+        }
+
+        .person-nav {
+          left: 142px;
+        }
       }
     }
   }
 
   @include overflows.mx_width1000 {
     .person {
-      width: clamp(300px, 35%, 450px);
+      width: clamp(300px, 45%, 450px);
+    }
+  }
+
+  @include overflows.mx_width1200 {
+    .person {
+      box-sizing: border-box;
     }
   }
 }
 
+.hr-under-senate {
+  border: 1px #444 solid;
+  box-shadow: 0 5px 10px 0 $cl-senato;
+}
 
+.hr-under-leader {
+  border: 1px #111 solid;
+  box-shadow: 0 5px 10px 0 $cl-leader;
+}
 
+.card-person-project {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
+  position: relative;
+  padding: 20px 10px;
+  width: 300px;
+  background-color: #191919;
+  border-radius: 20px;
 
+  margin-top: 10px;
 
+  &:after {
+    content: "";
+    position: absolute;
+    border-radius: 0 0 20px 20px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 20px;
+    background-color: #282828;
+  }
 
+  .c-p-p-name {
+    font: 300 14px fonts.$font-stack;
+  }
+}
 
+.card-person-project-leader {
+  width: 350px;
+  padding: 50px 25px;
 
+  .c-p-p-l-photo {
+    position: absolute;
+    height: 150px;
+    z-index: 1;
+    top: -85px;
+  }
 
-
+  .c-p-p-l-name {
+    font: 300 18px fonts.$font-stack;
+  }
+}

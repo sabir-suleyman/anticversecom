@@ -1,0 +1,8 @@
+.gallery-person-project {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  flex-direction: row;
+
+  margin: clamp(85px, 5vw, 100px) clamp(20px, 5vw, 40px);
+}

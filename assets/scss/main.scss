@@ -127,4 +127,14 @@ h1 {
     margin: 0;
     font: 300 18px fonts.$font-stack;
   }
+
+  &[data-style="fullscreen"] {
+    img {
+      object-fit: unset;
+      height: 100svh;
+      filter: brightness(0.5) saturate(1.5);
+    }
+
+    height: 100svh;
+  }
 }
