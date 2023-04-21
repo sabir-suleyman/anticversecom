@@ -1,3 +1,5 @@
+@use "../overflows";
+
 .gallery-person-project {
   display: flex;
   justify-content: space-evenly;
@@ -5,4 +7,145 @@
   flex-direction: row;
 
   margin: clamp(85px, 5vw, 100px) clamp(20px, 5vw, 40px);
+}
+
+$cl-senato: #EB00FF;
+$cl-leader: #00FFE0;
+$cl-legion: #F60000;
+
+$cl-senate-shadow: rgba(244, 128, 255, 0.1);
+$cl-leader-shadow: rgba(128, 255, 242, 0.1);
+$cl-legion-shadow: rgba(255, 128, 128, 0.1);
+
+$blur: 10px;
+$spread: 10px;
+$transition: 350ms;
+$outer-shadow-dark: #090909;
+$inner-shadow-dark: #090909;
+
+.gallery-person {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+
+  &[data-style="senate"] {
+    .person {
+      background: linear-gradient(145deg, $inner-shadow-dark, $cl-senate-shadow);
+      box-shadow: $spread $spread $blur $outer-shadow-dark,
+      -1 * $spread -1 * $spread $blur $cl-senate-shadow;
+
+      &:before {
+        background: linear-gradient(300deg, $inner-shadow-dark, $cl-senate-shadow);
+      }
+
+      &:hover {
+        box-shadow: $spread $spread $blur $cl-senate-shadow,
+        -1 * $spread -1 * $spread $blur $outer-shadow-dark;
+      }
+
+      .person-text-area h2 {
+        color: $cl-senato;
+      }
+    }
+  }
+
+  &[data-style="leader"] {
+    .person {
+      background: linear-gradient(145deg, $inner-shadow-dark, $cl-leader-shadow);
+      box-shadow: $spread $spread $blur $outer-shadow-dark,
+      -1 * $spread -1 * $spread $blur $cl-leader-shadow;
+
+      &:before {
+        background: linear-gradient(300deg, $inner-shadow-dark, $cl-leader-shadow);
+      }
+
+      &:hover {
+        box-shadow: $spread $spread $blur $cl-leader-shadow,
+        -1 * $spread -1 * $spread $blur $outer-shadow-dark;
+      }
+
+      .person-text-area h2 {
+        color: $cl-leader;
+      }
+    }
+  }
+
+  &[data-style="legion"] {
+    .person {
+      box-shadow: $spread $spread $blur #101010,
+      -1 * $spread -1 * $spread $blur $cl-legion-shadow;
+
+      &:hover {
+        box-shadow: $spread $spread $blur $cl-legion-shadow,
+        -1 * $spread -1 * $spread $blur #101010;
+      }
+
+      .person-text-area h2 {
+        color: $cl-legion;
+      }
+    }
+  }
+
+  @include overflows.mx_width500 {
+    flex-direction: row;
+
+    .person {
+      margin: clamp(25px, 5vh, 50px) clamp(10px, 5vw, 15px);
+      width: clamp(300px, 75%, 450px);
+      flex-direction: row;
+
+      .person-video {
+        width: 150px;
+        height: 150px;
+      }
+
+      .person-text-area {
+        margin: 10px;
+        position: unset;
+      }
+
+      .person-nav {
+        margin: 10px;
+        place-self: flex-end;
+        position: absolute;
+        top: unset;
+        left: 172px;
+      }
+    }
+
+    &[data-style="senate"] {
+      .person {
+        width: clamp(450px, 75%, 500px);
+      }
+    }
+
+    &[data-style="legion"] {
+      .person {
+        width: clamp(300px, 75%, 400px);
+
+        .person-video {
+          width: 120px;
+          height: 120px;
+        }
+
+        .person-nav {
+          left: 142px;
+        }
+      }
+    }
+  }
+
+  @include overflows.mx_width1000 {
+    .person {
+      width: clamp(300px, 45%, 450px);
+    }
+  }
+
+  @include overflows.mx_width1200 {
+    .person {
+      box-sizing: border-box;
+    }
+  }
 }
