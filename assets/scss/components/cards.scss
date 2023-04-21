@@ -256,6 +256,20 @@ $inner-shadow-dark: #090909;
   }
 }
 
+.card-person-legion {
+  box-shadow: $spread $spread $blur #101010,
+  -1 * $spread -1 * $spread $blur $cl-legion-shadow;
+
+  &:hover {
+    box-shadow: $spread $spread $blur $cl-legion-shadow,
+    -1 * $spread -1 * $spread $blur #101010;
+  }
+
+  .person-text-area h2 {
+    color: $cl-legion;
+  }
+}
+
 .hr-under-senate {
   border: 1px #444 solid;
   box-shadow: 0 5px 10px 0 $cl-senato;

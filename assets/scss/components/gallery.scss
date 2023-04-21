@@ -30,22 +30,6 @@ $inner-shadow-dark: #090909;
   flex-wrap: wrap;
   justify-content: space-evenly;
 
-  &[data-style="legion"] {
-    .card-person {
-      box-shadow: $spread $spread $blur #101010,
-      -1 * $spread -1 * $spread $blur $cl-legion-shadow;
-
-      &:hover {
-        box-shadow: $spread $spread $blur $cl-legion-shadow,
-        -1 * $spread -1 * $spread $blur #101010;
-      }
-
-      .person-text-area h2 {
-        color: $cl-legion;
-      }
-    }
-  }
-
   @include overflows.mx_width500 {
     flex-direction: row;
 
@@ -77,18 +61,16 @@ $inner-shadow-dark: #090909;
       width: clamp(450px, 75%, 500px);
     }
 
-    &[data-style="legion"] {
-      .card-person {
-        width: clamp(300px, 75%, 400px);
+    .card-person-legion {
+      width: clamp(300px, 75%, 400px);
 
-        .person-video {
-          width: 120px;
-          height: 120px;
-        }
+      .person-video {
+        width: 120px;
+        height: 120px;
+      }
 
-        .person-nav {
-          left: 142px;
-        }
+      .person-nav {
+        left: 142px;
       }
     }
   }
