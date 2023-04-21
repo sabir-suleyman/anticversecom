@@ -1,0 +1,25 @@
+//
+//    Anticverse Webraider
+//
+//    Maintainer: Ferit Yiğit BALABAN <balaban.ferityigit@anticverse.com>
+@use "components/cards";
+
+// Set parameters at components/cards.scss to change card-person-* styling
+@mixin card-person-flavor($color) {
+  background: linear-gradient(145deg, cards.$inner-shadow-dark, $color);
+  box-shadow: cards.$spread cards.$spread cards.$blur cards.$outer-shadow-dark,
+  -1 * cards.$spread -1 * cards.$spread cards.$blur $color;
+
+  &:before {
+    background: linear-gradient(300deg, cards.$inner-shadow-dark, $color);
+  }
+
+  &:hover {
+    box-shadow: cards.$spread cards.$spread cards.$blur $color,
+    -1 * cards.$spread -1 * cards.$spread cards.$blur cards.$outer-shadow-dark;
+  }
+
+  .person-text-area h2 {
+    color: $color;
+  }
+}
