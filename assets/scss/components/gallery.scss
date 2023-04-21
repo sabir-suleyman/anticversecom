@@ -32,47 +32,6 @@ $inner-shadow-dark: #090909;
 
   @include overflows.mx_width500 {
     flex-direction: row;
-
-    .card-person {
-      margin: clamp(25px, 5vh, 50px) clamp(10px, 5vw, 15px);
-      width: clamp(300px, 75%, 450px);
-      flex-direction: row;
-
-      .c-p-video {
-        width: 150px;
-        height: 150px;
-      }
-
-      .person-text-area {
-        margin: 10px;
-        position: unset;
-      }
-
-      .person-nav {
-        margin: 10px;
-        place-self: flex-end;
-        position: absolute;
-        top: unset;
-        left: 172px;
-      }
-    }
-
-    .card-person-senate {
-      width: clamp(450px, 75%, 500px);
-    }
-
-    .card-person-legion {
-      width: clamp(300px, 75%, 400px);
-
-      .c-p-video {
-        width: 120px;
-        height: 120px;
-      }
-
-      .person-nav {
-        left: 142px;
-      }
-    }
   }
 
   @include overflows.mx_width1000 {

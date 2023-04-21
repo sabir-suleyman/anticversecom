@@ -204,10 +204,38 @@ $logo-height: 80px;
       opacity: 1;
     }
   }
+
+  @include overflows.mx_width500 {
+    margin: clamp(25px, 5vh, 50px) clamp(10px, 5vw, 15px);
+    width: clamp(300px, 75%, 450px);
+    flex-direction: row;
+
+    .c-p-video {
+      width: 150px;
+      height: 150px;
+    }
+
+    .person-text-area {
+      margin: 10px;
+      position: unset;
+    }
+
+    .person-nav {
+      margin: 10px;
+      place-self: flex-end;
+      position: absolute;
+      top: unset;
+      left: 172px;
+    }
+  }
 } // End of class: .person
 
 .card-person-senate {
   @include mixins.card-person-flavor(variables.$cl-senato, variables.$cl-senate-shadow);
+
+  @include overflows.mx_width500 {
+    width: clamp(450px, 75%, 500px);
+  }
 }
 
 .card-person-leader {
@@ -216,6 +244,19 @@ $logo-height: 80px;
 
 .card-person-legion {
   @include mixins.card-person-flavor(variables.$cl-legion, variables.$cl-legion-shadow);
+
+  @include overflows.mx_width500 {
+    width: clamp(300px, 75%, 400px);
+
+    .c-p-video {
+      width: 120px;
+      height: 120px;
+    }
+
+    .person-nav {
+      left: 142px;
+    }
+  }
 }
 
 .hr-under-senate {
