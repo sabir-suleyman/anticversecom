@@ -255,16 +255,6 @@ $logo-height: 80px;
   }
 } // End of class: .card-person-legion
 
-.hr-under-senate {
-  border: 1px #444 solid;
-  box-shadow: 0 5px 10px 0 variables.$cl-senato;
-}
-
-.hr-under-leader {
-  border: 1px #111 solid;
-  box-shadow: 0 5px 10px 0 variables.$cl-leader;
-}
-
 .card-person-project {
   display: flex;
   flex-direction: column;
