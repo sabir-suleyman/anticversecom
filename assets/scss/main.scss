@@ -60,6 +60,18 @@ a {
   &:visited {
     color: white;
   }
+
+  &[data-icon="logo-linkedin"] {
+    background-image: url("../media/logos/linkedin.webp");
+  }
+
+  &[data-icon="logo-instagram"] {
+    background-image: url("../media/logos/instagram.svg");
+  }
+
+  &[data-icon="logo-github"] {
+    background-image: url("../media/logos/github.svg");
+  }
 }
 
 ul {
