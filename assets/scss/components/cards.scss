@@ -155,7 +155,7 @@ $logo-height: 80px;
     }
   }
 
-  .person-nav {
+  .c-p-nav {
     place-self: start;
     position: relative;
     top: -20px;
@@ -220,7 +220,7 @@ $logo-height: 80px;
       position: unset;
     }
 
-    .person-nav {
+    .c-p-nav {
       margin: 10px;
       place-self: flex-end;
       position: absolute;
@@ -261,7 +261,7 @@ $logo-height: 80px;
       height: 120px;
     }
 
-    .person-nav {
+    .c-p-nav {
       left: 142px;
     }
   }
