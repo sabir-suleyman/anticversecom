@@ -1,13 +1,14 @@
 //
 //    Anticverse Webraider
 //
-//    Maintainer: Ferit Yiğit BALABAN <balaban.ferityigit@anticverse.com> <fybalaban@fybx.dev>
+//    Maintainer: Ferit Yiğit BALABAN <balaban.ferityigit@anticverse.com>
 
 @use "sass:math";
 @use "../colors";
 @use "../fonts";
 @use "../overflows";
 @use "../variables";
+@use "../mixins";
 
 $logo-height: 80px;
 
@@ -120,240 +121,139 @@ $logo-height: 80px;
   }
 }
 
-$cl-senato: #EB00FF;
-$cl-leader: #00FFE0;
-$cl-legion: #F60000;
-
-$cl-senate-shadow: rgba(244, 128, 255, 0.1);
-$cl-leader-shadow: rgba(128, 255, 242, 0.1);
-$cl-legion-shadow: rgba(255, 128, 128, 0.1);
-
-$blur: 10px;
-$spread: 10px;
-$transition: 350ms;
-$outer-shadow-dark: #090909;
-$inner-shadow-dark: #090909;
-
-.person-gallery {
+.card-person {
   display: flex;
   flex-direction: column;
   align-items: center;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
 
-  .person {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  position: relative;
+  padding: 20px;
 
+  border-radius: 40px;
+  transition: box-shadow variables.$transition ease-in-out,
+  background-color variables.$transition ease-in-out;
+
+  margin: clamp(30px, 5vh, 60px) 0;
+  width: clamp(235px, 30%, 300px);
+  z-index: 0;
+
+  .c-p-video {
+    border-radius: 20px;
+    object-fit: cover;
+    width: 100%;
+    height: 150px;
+  }
+
+  .c-p-text-area {
+    place-self: start;
     position: relative;
-    padding: 20px;
+    top: -25px;
 
+    h1, h2 {
+      margin: 0 !important;
+      font: 400 20px fonts.$font-stack !important;
+    }
+  }
+
+  .c-p-nav {
+    place-self: start;
+    position: relative;
+    top: -20px;
+    display: inline-flex;
+
+    a {
+      display: block;
+      margin: 0 10px 0 0;
+      width: 20px;
+      height: 20px;
+      background-size: contain;
+
+      &:last-of-type {
+        margin: 0;
+      }
+    }
+  }
+
+  &:before {
+    content: "";
     border-radius: 40px;
-    transition: box-shadow $transition ease-in-out, background-color $transition ease-in-out;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity variables.$transition linear;
+    z-index: -1;
+  }
 
-    margin: clamp(30px, 5vh, 60px) 0;
-    width: clamp(235px, 30%, 300px);
-    z-index: 0;
-
-    .person-video {
-      border-radius: 20px;
-      object-fit: cover;
-      width: 100%;
-      height: 150px;
-    }
-
-    .person-text-area {
-      place-self: start;
-      position: relative;
-      top: -25px;
-
-      h1, h2 {
-        margin: 0 !important;
-        font: 400 20px fonts.$font-stack !important;
-      }
-    }
-
-    .person-nav {
-      place-self: start;
-      position: relative;
-      top: -20px;
-      display: inline-flex;
-
-      a {
-        display: block;
-        margin: 0 10px 0 0;
-        width: 20px;
-        height: 20px;
-        background-size: contain;
-
-        &:last-of-type {
-          margin: 0;
-        }
-
-        &[data-icon="logo-linkedin"] {
-          background-image: url("../../media/logos/linkedin.webp");
-        }
-
-        &[data-icon="logo-instagram"] {
-          background-image: url("../../media/logos/instagram.svg");
-        }
-
-        &[data-icon="logo-github"] {
-          background-image: url("../../media/logos/github.svg");
-        }
-      }
-    }
-
+  &:hover {
     &:before {
-      content: "";
-      border-radius: 40px;
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      opacity: 0;
-      transition: opacity $transition linear;
-      z-index: -1;
-    }
-
-    &:hover {
-      &:before {
-        opacity: 1;
-      }
-    }
-  } // End of class: .person
-
-  &[data-style="senate"] {
-    .person {
-      background: linear-gradient(145deg, $inner-shadow-dark, $cl-senate-shadow);
-      box-shadow: $spread $spread $blur $outer-shadow-dark,
-                  -1 * $spread -1 * $spread $blur $cl-senate-shadow;
-
-      &:before {
-        background: linear-gradient(300deg, $inner-shadow-dark, $cl-senate-shadow);
-      }
-
-      &:hover {
-        box-shadow: $spread $spread $blur $cl-senate-shadow,
-                    -1 * $spread -1 * $spread $blur $outer-shadow-dark;
-      }
-
-      .person-text-area h2 {
-        color: $cl-senato;
-      }
-    }
-  }
-
-  &[data-style="leader"] {
-    .person {
-      background: linear-gradient(145deg, $inner-shadow-dark, $cl-leader-shadow);
-      box-shadow: $spread $spread $blur $outer-shadow-dark,
-                  -1 * $spread -1 * $spread $blur $cl-leader-shadow;
-
-      &:before {
-        background: linear-gradient(300deg, $inner-shadow-dark, $cl-leader-shadow);
-      }
-
-      &:hover {
-        box-shadow: $spread $spread $blur $cl-leader-shadow,
-                    -1 * $spread -1 * $spread $blur $outer-shadow-dark;
-      }
-
-      .person-text-area h2 {
-        color: $cl-leader;
-      }
-    }
-  }
-
-  &[data-style="legion"] {
-    .person {
-      box-shadow: $spread $spread $blur #101010,
-                  -1 * $spread -1 * $spread $blur $cl-legion-shadow;
-
-      &:hover {
-        box-shadow: $spread $spread $blur $cl-legion-shadow,
-                    -1 * $spread -1 * $spread $blur #101010;
-      }
-
-      .person-text-area h2 {
-        color: $cl-legion;
-      }
+      opacity: 1;
     }
   }
 
   @include overflows.mx_width500 {
+    margin: clamp(25px, 5vh, 50px) clamp(10px, 5vw, 15px);
+    width: clamp(300px, 75%, 450px);
     flex-direction: row;
 
-    .person {
-      margin: clamp(25px, 5vh, 50px) clamp(10px, 5vw, 15px);
-      width: clamp(300px, 75%, 450px);
-      flex-direction: row;
-
-      .person-video {
-        width: 150px;
-        height: 150px;
-      }
-
-      .person-text-area {
-        margin: 10px;
-        position: unset;
-      }
-
-      .person-nav {
-        margin: 10px;
-        place-self: flex-end;
-        position: absolute;
-        top: unset;
-        left: 172px;
-      }
+    .c-p-video {
+      width: 150px;
+      height: 150px;
     }
 
-    &[data-style="senate"] {
-      .person {
-        width: clamp(450px, 75%, 500px);
-      }
+    .c-p-text-area {
+      margin: 10px;
+      position: unset;
     }
 
-    &[data-style="legion"] {
-      .person {
-        width: clamp(300px, 75%, 400px);
-
-        .person-video {
-          width: 120px;
-          height: 120px;
-        }
-
-        .person-nav {
-          left: 142px;
-        }
-      }
+    .c-p-nav {
+      margin: 10px;
+      place-self: flex-end;
+      position: absolute;
+      top: unset;
+      left: 172px;
     }
   }
 
   @include overflows.mx_width1000 {
-    .person {
-      width: clamp(300px, 45%, 450px);
-    }
+    width: clamp(300px, 45%, 450px);
   }
 
   @include overflows.mx_width1200 {
-    .person {
-      box-sizing: border-box;
+    box-sizing: border-box;
+  }
+} // End of class: .card-person
+
+.card-person-senate {
+  @include mixins.card-person-flavor(variables.$cl-senato, variables.$cl-senate-shadow);
+
+  @include overflows.mx_width500 {
+    width: clamp(450px, 75%, 500px);
+  }
+} // End of class: .card-person-senate
+
+.card-person-leader {
+  @include mixins.card-person-flavor(variables.$cl-leader, variables.$cl-leader-shadow);
+} // End of class: .card-person-leader
+
+.card-person-legion {
+  @include mixins.card-person-flavor(variables.$cl-legion, variables.$cl-legion-shadow);
+
+  @include overflows.mx_width500 {
+    width: clamp(300px, 75%, 400px);
+
+    .c-p-video {
+      width: 120px;
+      height: 120px;
+    }
+
+    .c-p-nav {
+      left: 142px;
     }
   }
-}
-
-.hr-under-senate {
-  border: 1px #444 solid;
-  box-shadow: 0 5px 10px 0 $cl-senato;
-}
-
-.hr-under-leader {
-  border: 1px #111 solid;
-  box-shadow: 0 5px 10px 0 $cl-leader;
-}
+} // End of class: .card-person-legion
 
 .card-person-project {
   display: flex;
@@ -382,7 +282,7 @@ $inner-shadow-dark: #090909;
   .c-p-p-name {
     font: 300 14px fonts.$font-stack;
   }
-}
+} // End of class: .card-person-project
 
 .card-person-project-leader {
   width: 350px;
@@ -398,4 +298,4 @@ $inner-shadow-dark: #090909;
   .c-p-p-l-name {
     font: 300 18px fonts.$font-stack;
   }
-}
+} // End of class: .card-person-project-leader

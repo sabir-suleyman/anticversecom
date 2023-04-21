@@ -5,7 +5,7 @@
  */
 
 const personvideoArr
-    = document.querySelectorAll(".person-video")
+    = document.querySelectorAll(".c-p-video")
 
 function addListener($el) {
     $el.playbackRate = 1.5;
