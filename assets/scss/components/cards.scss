@@ -218,6 +218,25 @@ $inner-shadow-dark: #090909;
   }
 } // End of class: .person
 
+.card-person-senate {
+  background: linear-gradient(145deg, $inner-shadow-dark, $cl-senate-shadow);
+  box-shadow: $spread $spread $blur $outer-shadow-dark,
+  -1 * $spread -1 * $spread $blur $cl-senate-shadow;
+
+  &:before {
+    background: linear-gradient(300deg, $inner-shadow-dark, $cl-senate-shadow);
+  }
+
+  &:hover {
+    box-shadow: $spread $spread $blur $cl-senate-shadow,
+    -1 * $spread -1 * $spread $blur $outer-shadow-dark;
+  }
+
+  .person-text-area h2 {
+    color: $cl-senato;
+  }
+}
+
 .hr-under-senate {
   border: 1px #444 solid;
   box-shadow: 0 5px 10px 0 $cl-senato;

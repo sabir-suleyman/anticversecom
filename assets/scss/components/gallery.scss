@@ -30,27 +30,6 @@ $inner-shadow-dark: #090909;
   flex-wrap: wrap;
   justify-content: space-evenly;
 
-  &[data-style="senate"] {
-    .card-person {
-      background: linear-gradient(145deg, $inner-shadow-dark, $cl-senate-shadow);
-      box-shadow: $spread $spread $blur $outer-shadow-dark,
-      -1 * $spread -1 * $spread $blur $cl-senate-shadow;
-
-      &:before {
-        background: linear-gradient(300deg, $inner-shadow-dark, $cl-senate-shadow);
-      }
-
-      &:hover {
-        box-shadow: $spread $spread $blur $cl-senate-shadow,
-        -1 * $spread -1 * $spread $blur $outer-shadow-dark;
-      }
-
-      .person-text-area h2 {
-        color: $cl-senato;
-      }
-    }
-  }
-
   &[data-style="leader"] {
     .card-person {
       background: linear-gradient(145deg, $inner-shadow-dark, $cl-leader-shadow);
@@ -115,10 +94,8 @@ $inner-shadow-dark: #090909;
       }
     }
 
-    &[data-style="senate"] {
-      .card-person {
-        width: clamp(450px, 75%, 500px);
-      }
+    .card-person-senate {
+      width: clamp(450px, 75%, 500px);
     }
 
     &[data-style="legion"] {
