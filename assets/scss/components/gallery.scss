@@ -30,27 +30,6 @@ $inner-shadow-dark: #090909;
   flex-wrap: wrap;
   justify-content: space-evenly;
 
-  &[data-style="leader"] {
-    .card-person {
-      background: linear-gradient(145deg, $inner-shadow-dark, $cl-leader-shadow);
-      box-shadow: $spread $spread $blur $outer-shadow-dark,
-      -1 * $spread -1 * $spread $blur $cl-leader-shadow;
-
-      &:before {
-        background: linear-gradient(300deg, $inner-shadow-dark, $cl-leader-shadow);
-      }
-
-      &:hover {
-        box-shadow: $spread $spread $blur $cl-leader-shadow,
-        -1 * $spread -1 * $spread $blur $outer-shadow-dark;
-      }
-
-      .person-text-area h2 {
-        color: $cl-leader;
-      }
-    }
-  }
-
   &[data-style="legion"] {
     .card-person {
       box-shadow: $spread $spread $blur #101010,
