@@ -134,7 +134,7 @@ $transition: 350ms;
 $outer-shadow-dark: #090909;
 $inner-shadow-dark: #090909;
 
-.person {
+.card-person {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -217,10 +217,6 @@ $inner-shadow-dark: #090909;
     }
   }
 } // End of class: .person
-
-.person-gallery {
-
-}
 
 .hr-under-senate {
   border: 1px #444 solid;

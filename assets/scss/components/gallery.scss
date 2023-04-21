@@ -31,7 +31,7 @@ $inner-shadow-dark: #090909;
   justify-content: space-evenly;
 
   &[data-style="senate"] {
-    .person {
+    .card-person {
       background: linear-gradient(145deg, $inner-shadow-dark, $cl-senate-shadow);
       box-shadow: $spread $spread $blur $outer-shadow-dark,
       -1 * $spread -1 * $spread $blur $cl-senate-shadow;
@@ -52,7 +52,7 @@ $inner-shadow-dark: #090909;
   }
 
   &[data-style="leader"] {
-    .person {
+    .card-person {
       background: linear-gradient(145deg, $inner-shadow-dark, $cl-leader-shadow);
       box-shadow: $spread $spread $blur $outer-shadow-dark,
       -1 * $spread -1 * $spread $blur $cl-leader-shadow;
@@ -73,7 +73,7 @@ $inner-shadow-dark: #090909;
   }
 
   &[data-style="legion"] {
-    .person {
+    .card-person {
       box-shadow: $spread $spread $blur #101010,
       -1 * $spread -1 * $spread $blur $cl-legion-shadow;
 
@@ -91,7 +91,7 @@ $inner-shadow-dark: #090909;
   @include overflows.mx_width500 {
     flex-direction: row;
 
-    .person {
+    .card-person {
       margin: clamp(25px, 5vh, 50px) clamp(10px, 5vw, 15px);
       width: clamp(300px, 75%, 450px);
       flex-direction: row;
@@ -116,13 +116,13 @@ $inner-shadow-dark: #090909;
     }
 
     &[data-style="senate"] {
-      .person {
+      .card-person {
         width: clamp(450px, 75%, 500px);
       }
     }
 
     &[data-style="legion"] {
-      .person {
+      .card-person {
         width: clamp(300px, 75%, 400px);
 
         .person-video {
@@ -138,13 +138,13 @@ $inner-shadow-dark: #090909;
   }
 
   @include overflows.mx_width1000 {
-    .person {
+    .card-person {
       width: clamp(300px, 45%, 450px);
     }
   }
 
   @include overflows.mx_width1200 {
-    .person {
+    .card-person {
       box-sizing: border-box;
     }
   }
