@@ -228,6 +228,14 @@ $logo-height: 80px;
       left: 172px;
     }
   }
+
+  @include overflows.mx_width1000 {
+    width: clamp(300px, 45%, 450px);
+  }
+
+  @include overflows.mx_width1200 {
+    box-sizing: border-box;
+  }
 } // End of class: .person
 
 .card-person-senate {

@@ -33,16 +33,4 @@ $inner-shadow-dark: #090909;
   @include overflows.mx_width500 {
     flex-direction: row;
   }
-
-  @include overflows.mx_width1000 {
-    .card-person {
-      width: clamp(300px, 45%, 450px);
-    }
-  }
-
-  @include overflows.mx_width1200 {
-    .card-person {
-      box-sizing: border-box;
-    }
-  }
 }
