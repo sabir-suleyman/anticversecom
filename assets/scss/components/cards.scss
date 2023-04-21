@@ -1,7 +1,7 @@
 //
 //    Anticverse Webraider
 //
-//    Maintainer: Ferit Yiğit BALABAN <balaban.ferityigit@anticverse.com> <fybalaban@fybx.dev>
+//    Maintainer: Ferit Yiğit BALABAN <balaban.ferityigit@anticverse.com>
 
 @use "sass:math";
 @use "../colors";
@@ -224,7 +224,7 @@ $logo-height: 80px;
   @include overflows.mx_width1200 {
     box-sizing: border-box;
   }
-} // End of class: .person
+} // End of class: .card-person
 
 .card-person-senate {
   @include mixins.card-person-flavor(variables.$cl-senato, variables.$cl-senate-shadow);
@@ -232,11 +232,11 @@ $logo-height: 80px;
   @include overflows.mx_width500 {
     width: clamp(450px, 75%, 500px);
   }
-}
+} // End of class: .card-person-senate
 
 .card-person-leader {
   @include mixins.card-person-flavor(variables.$cl-leader, variables.$cl-leader-shadow);
-}
+} // End of class: .card-person-leader
 
 .card-person-legion {
   @include mixins.card-person-flavor(variables.$cl-legion, variables.$cl-legion-shadow);
@@ -253,7 +253,7 @@ $logo-height: 80px;
       left: 142px;
     }
   }
-}
+} // End of class: .card-person-legion
 
 .hr-under-senate {
   border: 1px #444 solid;
@@ -292,7 +292,7 @@ $logo-height: 80px;
   .c-p-p-name {
     font: 300 14px fonts.$font-stack;
   }
-}
+} // End of class: .card-person-project
 
 .card-person-project-leader {
   width: 350px;
@@ -308,4 +308,4 @@ $logo-height: 80px;
   .c-p-p-l-name {
     font: 300 18px fonts.$font-stack;
   }
-}
+} // End of class: .card-person-project-leader
