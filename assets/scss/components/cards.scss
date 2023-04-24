@@ -306,6 +306,7 @@ $logo-height: 80px;
   display: flex;
   align-items: center;
 
+  margin: 30px 30px 30px 70px;
   height: 300px;
 
   .c-w-content {
@@ -382,7 +383,7 @@ $logo-height: 80px;
   &:hover {
     .c-w-cover {
       filter: grayscale(0);
-      transform: translateX(-150px);
+      transform: translateX(-100px);
     }
   }
 }
