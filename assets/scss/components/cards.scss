@@ -17,6 +17,7 @@ $logo-height: 80px;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  margin: 100px 0 0 0;
 
   .card {
     position: relative;
@@ -114,10 +115,6 @@ $logo-height: 80px;
     &:hover:nth-of-type(5) .image img {
       margin-top: 32%;
     }
-  }
-
-  .card-black {
-
   }
 }
 

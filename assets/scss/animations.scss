@@ -1,0 +1,31 @@
+//
+//    Anticverse Webraider
+//
+//    Maintainer: Ferit Yiğit BALABAN <balaban.ferityigit@anticverse.com>
+@use "keyframes";
+@use "variables";
+
+.anim-slide-down-appear, .anim-slide-right-appear, .anim-slide-up-appear, .anim-appear {
+  opacity: 0;
+}
+
+.slide-down-appear, .slide-right-appear, .slide-up-appear, .appear {
+  animation-fill-mode: forwards;
+  opacity: 1;
+}
+
+.slide-down-appear {
+  animation: slide-down-appear variables.$timing-elements;
+}
+
+.slide-right-appear {
+  animation: slide-right-appear 2000ms;
+}
+
+.slide-up-appear {
+  animation: slide-up-appear variables.$timing-elements;
+}
+
+.appear {
+  animation: appear variables.$timing-elements;
+}
