@@ -1,5 +1,14 @@
+#
+#       Anticverse Webraider
+#
+#       Maintainer: Ferit Yiğit BALABAN <balaban.ferityigit@anticverse.com>
+
 RewriteEngine On
 RewriteBase /
+
+# Redirect requests for "index" or "index.html" to the root directory
+RewriteCond %{THE_REQUEST} ^(GET|HEAD)\ /(.*/)?index(\.html)?(\?.*)?\ HTTP
+RewriteRule ^(.*/)?index(\.html)?$ /$1 [R=301,L]
 
 # Redirect all requests to the corresponding HTML file
 RewriteCond %{REQUEST_FILENAME} !-d
