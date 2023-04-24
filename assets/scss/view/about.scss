@@ -15,18 +15,6 @@ $px_text: 16px;
 }
 
 #sec-wrw, #sec-details, #sec-legion {
-  padding: variables.$site-lr-padding300 * 3 variables.$site-lr-padding300 * 2;
-
-  @include overflows.mx_width800 {
-    padding: variables.$site-lr-padding200 * 2 variables.$site-lr-padding200 * 2;
-  }
-
-  @include overflows.mx_width1200 {
-    padding: variables.$site-lr-padding variables.$site-lr-padding * 2;
-  }
-}
-
-#sec-wrw, #sec-details, #sec-legion {
   h1 {
     margin: math.div($px_heading1, 2) 0 math.div($px_heading1, 4) 0;
     font: 600 $px_heading1 fonts.$font-stack;
