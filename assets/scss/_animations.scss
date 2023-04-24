@@ -79,3 +79,13 @@
     opacity: 1;
   }
 }
+
+@keyframes hue-rotate {
+  from {
+    filter: hue-rotate(0);
+  }
+
+  to {
+    filter: hue-rotate(360deg);
+  }
+}
