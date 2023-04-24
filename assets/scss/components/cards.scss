@@ -9,7 +9,6 @@
 @use "../overflows";
 @use "../variables";
 @use "../mixins";
-@use "../urls";
 
 $logo-height: 80px;
 
@@ -341,20 +340,18 @@ $logo-height: 80px;
           border-color: $value;
         }
       }
-    }
-
-    .c-w-c-title, .c-w-c-description {
-      text-align: end;
-    }
+    } // End of class: .c-w-ecol
 
     .c-w-c-title {
       margin: 10px 0 20px;
-    }
+      text-align: end;
+    } // End of class: .c-w-title
 
     .c-w-c-description {
       margin: 0;
-    }
-  }
+      text-align: end;
+    } // End of class: .c-w-description
+  } // End of class: .c-w-content
 
   &:before {
     content: "";
@@ -378,12 +375,12 @@ $logo-height: 80px;
 
     transition: filter 350ms ease-out, transform 350ms ease-out;
     filter: grayscale(0.8);
-  }
+  } // End of class: .c-w-cover
 
   &:hover {
     .c-w-cover {
       filter: grayscale(0);
       transform: translateX(-100px);
     }
-  }
-}
+  } // End of pseudo: hover
+} // End of class: .card-work
