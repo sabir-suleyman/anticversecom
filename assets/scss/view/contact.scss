@@ -8,18 +8,6 @@
 $px-heading: 50px;
 $px-text: 18px;
 
-#sec-cta, #sec-addressbook {
-  padding: 50px variables.$site-lr-padding300 * 2;
-
-  @include overflows.mx_width800 {
-    padding: 50px variables.$site-lr-padding200 * 2;
-  }
-
-  @include overflows.mx_width1200 {
-    padding: 50px variables.$site-lr-padding * 2;
-  }
-}
-
 #sec-cta {
   display: flex;
   flex-direction: column;

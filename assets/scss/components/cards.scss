@@ -299,3 +299,131 @@ $logo-height: 80px;
     font: 300 18px fonts.$font-stack;
   }
 } // End of class: .card-person-project-leader
+
+.card-work {
+  position: relative;
+  display: flex;
+  justify-content: center;
+
+  margin-bottom: 20px;
+  height: 400px;
+
+  transition: margin-top 350ms ease-out;
+
+  .c-w-content {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    padding: 20px;
+
+    .c-w-c-ecol {
+      margin: 0;
+      padding: 6px 12px;
+
+      border-width: 2px;
+      border-style: solid;
+      border-radius: 16px;
+
+      font-size: 12px;
+
+      $border-colors: (
+              "lodom": colors.$cl-border-color-lodom,
+              "webraider": colors.$cl-border-color-webraider,
+      );
+
+      @each $color, $value in $border-colors {
+        &[data-border-color="#{$color}"] {
+          border-color: $value;
+        }
+      }
+    } // End of class: .c-w-ecol
+
+    .c-w-c-title {
+      margin: 10px 0 20px;
+      text-align: end;
+    } // End of class: .c-w-title
+
+    .c-w-c-description {
+      margin: 0;
+      text-align: end;
+    } // End of class: .c-w-description
+  } // End of class: .c-w-content
+
+  &:before {
+    content: "";
+    position: absolute;
+    z-index: 0;
+
+    width: 100%;
+    height: 100%;
+    clip-path: polygon(0 30%, 100% 0, 100% 100%, 0% 100%);
+
+    background-color: rgb(66 66 66 / 66%);
+    border-radius: 0 0 16px 16px;
+    backdrop-filter: blur(33px);
+  }
+
+  .c-w-cover {
+    width: 90%;
+    height: 99%;
+    z-index: -1;
+    object-fit: cover;
+
+    border-radius: 16px 16px 0 0;
+
+    transition: filter 350ms ease-out, transform 350ms ease-out;
+    filter: grayscale(0.8);
+  } // End of class: .c-w-cover
+
+  &:hover {
+    margin-top: 90px;
+
+    .c-w-cover {
+      filter: grayscale(0);
+      transform: translateY(-100px);
+    }
+  } // End of pseudo: hover
+
+  @include overflows.mx_width800 {
+    align-items: center;
+    justify-content: unset;
+
+    margin: 30px 30px 30px 90px;
+    height: 300px;
+
+    transition: unset;
+
+    .c-w-content {
+      bottom: unset;
+
+      width: 70%;
+    } // End of class: .c-w-content
+
+    &:before {
+      clip-path: polygon(30% 0, 100% 0%, 100% 100%, 0 100%);
+      border-radius: 0 16px 16px 0;
+    }
+
+    .c-w-cover {
+      width: unset;
+      height: 90%;
+
+      border-radius: 16px 0 0 16px;
+    } // End of class: .c-w-cover
+
+    &:hover {
+      margin-top: 30px;
+
+      .c-w-cover {
+        filter: grayscale(0);
+        transform: translateX(-100px);
+      }
+    } // End of pseudo: hover
+  }
+} // End of class: .card-work

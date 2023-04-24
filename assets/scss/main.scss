@@ -162,3 +162,36 @@ h1 {
   background: transparent;
   border-top: solid 1px rgba(255, 255, 255, 0.25);
 }
+
+.padded {
+  padding: variables.$site-lr-padding300 * 3 variables.$site-lr-padding300 * 2;
+
+  @include overflows.mx_width1200 {
+    padding: 75px 50px;
+  }
+
+  @include overflows.mx_width1400 {
+    padding: 100px;
+  }
+
+  @include overflows.mx_width1600 {
+    padding: 150px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
