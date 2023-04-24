@@ -375,5 +375,15 @@ $logo-height: 80px;
     object-fit: unset;
 
     border-radius: 16px 0 0 16px;
+
+    transition: filter 350ms ease-out, transform 350ms ease-out;
+    filter: grayscale(0.8);
+  }
+
+  &:hover {
+    .c-w-cover {
+      filter: grayscale(0);
+      transform: translateX(-150px);
+    }
   }
 }
