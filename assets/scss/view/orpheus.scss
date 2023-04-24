@@ -22,15 +22,3 @@
     flex-direction: row-reverse;
   }
 }
-
-.p-s-logo {
-  animation: variables.$timing-showcase slide-down-appear;
-}
-
-.p-s-description {
-  animation: variables.$timing-showcase appear;
-}
-
-.p-s-ecol-logo {
-  animation: variables.$timing-showcase slide-up-appear;
-}
