@@ -304,6 +304,7 @@ $logo-height: 80px;
 .card-work {
   position: relative;
   display: flex;
+  align-items: center;
 
   .c-w-content {
     position: absolute;
@@ -330,10 +331,13 @@ $logo-height: 80px;
 
     background-color: rgb(66 66 66 / 66%);
     border-radius: 0 16px 16px 0;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(33px);
   }
 
   .c-w-cover {
+    object-fit: unset;
     height: 80%;
+
+    border-radius: 16px 0 0 16px;
   }
 }
