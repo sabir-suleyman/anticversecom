@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Discover Anticverse Labs, a philosophy-based informatics team of Ecols specialising in diverse areas such as game development, web and design, artificial intelligence, and blockchain.">
 
@@ -20,9 +20,11 @@
     <link href="assets/css/components/button.css" rel="stylesheet" type="text/css">
     <link href="assets/css/components/cards.css" rel="stylesheet" type="text/css">
     <link href="assets/css/components/gallery.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/animations.css" rel="stylesheet" type="text/css">
 
     <script src="assets/js/main.js" defer></script>
     <script src="assets/js/index.js" defer></script>
+    <script src="assets/js/animations.js" defer></script>
     <title>Anticverse</title>
 </head>
 
@@ -71,33 +73,33 @@
     <!--suppress CssOverwrittenProperties -->
     <section id="showcase" data-style="fullscreen">
         <video src="assets/media/index/poster.webm" autoplay muted loop></video>
-        <h1>Anticverse <span>Labs.</span></h1>
-        <h2>Meta-archetypes of technologies, philosophy based informatics group.</h2>
+        <h1 class="anim-slide-down-appear">Anticverse <span>Labs.</span></h1>
+        <h2 class="anim-slide-up-appear">Meta-archetypes of technologies, philosophy based informatics group.</h2>
         <div id="please-scroll-down"></div>
     </section>
 
     <section class="padded" id="sec-wwr">
-        <h1>Who Are We?</h1>
-        <p>Anticverse Labs is the company of the future that builds and studies web development, artificial intelligence, blockchain technologies, virtual reality, and game development of myths for different purposes.</p>
-        <a href="about.html"><button class="button">More</button></a>
-        <a href="journal.html"><button class="button">E-Journal</button></a>
+        <h1 class="anim-slide-right-appear">Who Are We?</h1>
+        <p class="anim-appear">Anticverse Labs is the company of the future that builds and studies web development, artificial intelligence, blockchain technologies, virtual reality, and game development of myths for different purposes.</p>
+        <a href="about.html"><button class="button anim-slide-up-appear">More</button></a>
+        <a href="journal.html"><button class="button anim-slide-up-appear">E-Journal</button></a>
     </section>
 
     <section class="padded" id="sec-labs">
-        <h1>Labs</h1>
-        <p>Our in-building laboratories.</p>
-        <img alt="Diagram showcasing Anticverse's labs" src="assets/media/index/labs.svg">
+        <h1 class="anim-slide-right-appear">Labs</h1>
+        <p class="anim-slide-up-appear">Our in-building laboratories.</p>
+        <img class="anim-appear" src="assets/media/index/labs.svg" alt="Diagram showcasing Anticverse's labs">
     </section>
 
     <section class="content padded" id="sec-founders">
-        <h1>Founders</h1>
+        <h1 class="anim-slide-right-appear">Founders</h1>
         <section class="gallery-person-project">
-            <div class="card-person-project card-person-project-leader">
+            <div class="card-person-project card-person-project-leader anim-slide-up-appear">
                 <img class="c-p-p-l-photo" src="assets/media/legion/imgs/emg.webp" alt="Emirhan GÜNGÖRMEZ">
                 <h1 class="c-p-p-l-name">Emirhan <span data-style="bold">GÜNGÖRMEZ</span> | <span data-style="colored">Founder</span></h1>
             </div>
 
-            <div class="card-person-project card-person-project-leader">
+            <div class="card-person-project card-person-project-leader anim-slide-up-appear">
                 <img class="c-p-p-l-photo" src="assets/media/legion/imgs/bag.webp" alt="Baturalp GÜVENÇ">
                 <h1 class="c-p-p-l-name">Baturalp <span data-style="bold">GÜVENÇ</span> | <span data-style="colored">Founder</span></h1>
             </div>
@@ -105,9 +107,9 @@
     </section>
 
     <section class="content content-white padded" id="sec-ecols">
-        <h1>Ecols</h1>
-        <p>Ecols form the core functional units of Anticverse, playing a critical role in a range of activities from project development and maintenance to new employee training and education. Anticverse boasts six highly skilled and specialized ecols, each focused on their specific areas of expertise.</p>
-        <section class="card-gallery">
+        <h1 class="anim-slide-right-appear">Ecols</h1>
+        <p class="anim-slide-up-appear">Ecols form the core functional units of Anticverse, playing a critical role in a range of activities from project development and maintenance to new employee training and education. Anticverse boasts six highly skilled and specialized ecols, each focused on their specific areas of expertise.</p>
+        <section class="card-gallery anim-appear">
             <div class="card">
                 <div class="image">
                     <img alt="Logo of Webraider" src="assets/media/index/webraider.webp">
