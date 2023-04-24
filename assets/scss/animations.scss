@@ -5,13 +5,17 @@
 @use "keyframes";
 @use "variables";
 
-.anim-slide-right-appear, .anim-slide-up-appear, .anim-appear {
+.anim-slide-down-appear, .anim-slide-right-appear, .anim-slide-up-appear, .anim-appear {
   opacity: 0;
 }
 
-.slide-right-appear, .slide-up-appear, .appear {
+.slide-down-appear, .slide-right-appear, .slide-up-appear, .appear {
   animation-fill-mode: forwards;
   opacity: 1;
+}
+
+.slide-down-appear {
+  animation: slide-down-appear variables.$timing-elements;
 }
 
 .slide-right-appear {
