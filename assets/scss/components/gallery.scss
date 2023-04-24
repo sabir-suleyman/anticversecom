@@ -25,3 +25,10 @@
     flex-direction: row;
   }
 }
+
+.gallery-work {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
