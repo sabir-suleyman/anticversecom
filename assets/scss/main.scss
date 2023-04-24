@@ -166,11 +166,32 @@ h1 {
 .padded {
   padding: variables.$site-lr-padding300 * 3 variables.$site-lr-padding300 * 2;
 
-  @include overflows.mx_width800 {
-    padding: variables.$site-lr-padding200 * 2 variables.$site-lr-padding200 * 2;
+  @include overflows.mx_width1200 {
+    padding: 75px 50px;
   }
 
-  @include overflows.mx_width1200 {
-    padding: variables.$site-lr-padding variables.$site-lr-padding * 2;
+  @include overflows.mx_width1400 {
+    padding: 100px;
+  }
+
+  @include overflows.mx_width1600 {
+    padding: 150px;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
