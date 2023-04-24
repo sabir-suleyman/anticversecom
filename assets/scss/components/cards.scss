@@ -342,6 +342,10 @@ $logo-height: 80px;
         }
       }
     }
+
+    .c-w-c-title, .c-w-c-description {
+      text-align: end;
+    }
   }
 
   &:before {
