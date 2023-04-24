@@ -310,7 +310,6 @@ $logo-height: 80px;
 
   .c-w-content {
     position: absolute;
-    top: 0;
     right: 0;
     z-index: 1;
 
@@ -345,6 +344,14 @@ $logo-height: 80px;
 
     .c-w-c-title, .c-w-c-description {
       text-align: end;
+    }
+
+    .c-w-c-title {
+      margin: 5px 0 10px;
+    }
+
+    .c-w-c-description {
+      margin: 0;
     }
   }
 
