@@ -303,14 +303,16 @@ $logo-height: 80px;
 .card-work {
   position: relative;
   display: flex;
-  align-items: center;
+  justify-content: center;
 
-  margin: 30px 30px 30px 70px;
-  height: 300px;
+  height: 400px;
+
+  transition: margin-top 350ms ease-out;
 
   .c-w-content {
     position: absolute;
     right: 0;
+    bottom: 0;
     z-index: 1;
 
     display: flex;
@@ -318,7 +320,6 @@ $logo-height: 80px;
     align-items: flex-end;
 
     padding: 20px;
-    width: 70%;
 
     .c-w-c-ecol {
       margin: 0;
@@ -360,27 +361,67 @@ $logo-height: 80px;
 
     width: 100%;
     height: 100%;
-    clip-path: polygon(30% 0, 100% 0%, 100% 100%, 0 100%);
+    clip-path: polygon(0 30%, 100% 0, 100% 100%, 0% 100%);
 
     background-color: rgb(66 66 66 / 66%);
-    border-radius: 0 16px 16px 0;
+    border-radius: 0 0 16px 16px;
     backdrop-filter: blur(33px);
   }
 
   .c-w-cover {
-    height: 90%;
+    width: 90%;
+    height: 99%;
     z-index: -1;
+    object-fit: cover;
 
-    border-radius: 16px 0 0 16px;
+    border-radius: 16px 16px 0 0;
 
     transition: filter 350ms ease-out, transform 350ms ease-out;
     filter: grayscale(0.8);
   } // End of class: .c-w-cover
 
   &:hover {
+    margin-top: 100px;
+
     .c-w-cover {
       filter: grayscale(0);
-      transform: translateX(-100px);
+      transform: translateY(-100px);
     }
   } // End of pseudo: hover
+
+  @include overflows.mx_width800 {
+    align-items: center;
+    justify-content: unset;
+
+    height: 300px;
+
+    transition: unset;
+
+    .c-w-content {
+      bottom: unset;
+
+      width: 70%;
+    } // End of class: .c-w-content
+
+    &:before {
+      clip-path: polygon(30% 0, 100% 0%, 100% 100%, 0 100%);
+      border-radius: 0 16px 16px 0;
+    }
+
+    .c-w-cover {
+      width: unset;
+      height: 90%;
+
+      border-radius: 16px 0 0 16px;
+    } // End of class: .c-w-cover
+
+    &:hover {
+      margin-top: unset;
+
+      .c-w-cover {
+        filter: grayscale(0);
+        transform: translateX(-100px);
+      }
+    } // End of pseudo: hover
+  }
 } // End of class: .card-work
