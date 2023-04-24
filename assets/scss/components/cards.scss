@@ -305,6 +305,7 @@ $logo-height: 80px;
   display: flex;
   justify-content: center;
 
+  margin-bottom: 20px;
   height: 400px;
 
   transition: margin-top 350ms ease-out;
@@ -381,7 +382,7 @@ $logo-height: 80px;
   } // End of class: .c-w-cover
 
   &:hover {
-    margin-top: 100px;
+    margin-top: 90px;
 
     .c-w-cover {
       filter: grayscale(0);
