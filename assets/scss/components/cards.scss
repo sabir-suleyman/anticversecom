@@ -280,12 +280,14 @@ $logo-height: 80px;
   }
 
   .c-p-p-name {
+    color: #FFF !important;
     font: 300 14px fonts.$font-stack;
   }
 } // End of class: .card-person-project
 
 .card-person-project-leader {
   width: 350px;
+  margin-top: 90px;
   padding: 50px 25px;
 
   .c-p-p-l-photo {
@@ -296,7 +298,16 @@ $logo-height: 80px;
   }
 
   .c-p-p-l-name {
+    color: #FFF !important;
     font: 300 18px fonts.$font-stack;
+  }
+
+  &:nth-of-type(1) {
+    margin-top: 0;
+  }
+
+  @media screen and (min-width: 975px) {
+    margin-top: 0;
   }
 } // End of class: .card-person-project-leader
 

@@ -9,34 +9,6 @@
 @use "../overflows";
 @use "../animations";
 
-.content {
-  text-align: center;
-
-  h1 {
-    margin: 0 0 20px 0;
-    font-size: variables.$site-generic-heading300;
-
-    @include overflows.mx_width800 {
-      font-size: variables.$site-generic-heading200;
-    }
-
-    @include overflows.mx_width1200 {
-      font-size: variables.$site-generic-heading100;
-    }
-  }
-
-  p {
-    margin: 0 0 40px 0;
-    font-weight: 600;
-    font-size: 18px;
-  }
-}
-
-.content-white {
-  background: white;
-  color: black;
-}
-
 #showcase {
   video {
     height: 150vh !important;
@@ -80,5 +52,13 @@
     opacity: 1;
     animation: wheel 2s infinite;
     -webkit-animation: wheel 2s infinite;
+  }
+}
+
+#sec-founders {
+  background-color: #FFF;
+
+  h1 {
+    color: #000;
   }
 }
