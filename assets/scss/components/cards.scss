@@ -306,6 +306,8 @@ $logo-height: 80px;
   display: flex;
   align-items: center;
 
+  height: 300px;
+
   .c-w-content {
     position: absolute;
     top: 0;
@@ -318,6 +320,28 @@ $logo-height: 80px;
 
     padding: 20px;
     width: 70%;
+
+    .c-w-c-ecol {
+      margin: 0;
+      padding: 6px 12px;
+
+      border-width: 2px;
+      border-style: solid;
+      border-radius: 16px;
+
+      font-size: 12px;
+
+      $border-colors: (
+              "lodom": colors.$cl-border-color-lodom,
+              "webraider": colors.$cl-border-color-webraider,
+      );
+
+      @each $color, $value in $border-colors {
+        &[data-border-color="#{$color}"] {
+          border-color: $value;
+        }
+      }
+    }
   }
 
   &:before {
@@ -335,8 +359,9 @@ $logo-height: 80px;
   }
 
   .c-w-cover {
-    object-fit: unset;
+    width: unset;
     height: 80%;
+    object-fit: unset;
 
     border-radius: 16px 0 0 16px;
   }
