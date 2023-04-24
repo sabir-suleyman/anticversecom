@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore Anticverse Labs' portfolio of innovative projects that combine philosophy, art, and technology to create practical solutions for the benefit of the masses.">
+
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -16,30 +18,37 @@
     <link href="assets/css/main.css" rel="stylesheet" type="text/css">
     <link href="assets/css/view/projects.css" rel="stylesheet" type="text/css">
     <link href="assets/css/components/button.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/components/cards.css?version=2" rel="stylesheet" type="text/css">
+    <link href="assets/css/components/gallery.css?version=2" rel="stylesheet" type="text/css">
 
     <script src="assets/js/main.js" defer></script>
     <title>Projects | Anticverse</title>
 </head>
 
 <body>
-
 <header id="header">
     <section id="header-upper">
         <a href="mailto:info@anticverse.com">info@anticverse.com</a>
         <a href="">Türkçe</a>
     </section>
+
     <section class="no-highlight" id="header-lower">
         <div id="img-container"><img alt="logo" src="assets/media/header_logo.svg"></div>
+
         <h1>Anticverse</h1>
+
         <ul id="navbar">
             <li class="navitem"><a href="index.html">Home</a></li>
             <li class="navitem navitem-select"><a href="#">Projects</a></li>
             <li class="navitem"><a href="about.html">About</a></li>
             <li class="navitem"><a href="contact.html">Contact</a></li>
         </ul>
+
         <div id="hamburger-container">
             <div class="menu-icon no-highlight">
-                <input class="menu-icon-input" type="checkbox" autocomplete="off"/>
+                <label>
+                    <input class="menu-icon-input" type="checkbox" autocomplete="off"/>
+                </label>
                 <div>
                     <span></span>
                     <span></span>
@@ -47,8 +56,8 @@
             </div>
         </div>
     </section>
-
 </header>
+
 <aside id="menu">
     <nav class="menu-nav">
         <a href="index.html" class="menu-navitem">Home</a>
@@ -57,15 +66,28 @@
         <a href="contact.html" class="menu-navitem">Contact</a>
     </nav>
 </aside>
+
 <main>
-    <section id="showcase" data-style="fullscreen">
-        <img alt="Showcase for projects.html" src="assets/media/projects/showcase.png">
+    <section id="showcase">
+        <img alt="Showcase for projects.html" src="assets/media/projects/showcase.webp">
         <h1>Projects</h1>
-        <h2>This page is a WIP! Bookmark it for future updates and maybe check back later for even more awesomeness!</h2>
+        <h2>Discover our game-changing projects and solutions, fueled by the latest technologies and expert teams.</h2>
+    </section>
+
+    <section class="gallery-work padded">
+        <section class="card-work">
+            <img class="c-w-cover" src="assets/media/projects/orpheus/project_cover.webp" alt="A digital art of Eurydice from Orpheus Underland. Drawn by Öznur ÖZSOY.">
+            <div class="c-w-content">
+                <h1 class="c-w-c-ecol" data-border-color="lodom">Lodom</h1>
+                <h2 class="c-w-c-title">Orpheus Underland</h2>
+                <p class="c-w-c-description">Orpheus Underland is an RPG adventure game where players control a humanoid robot sent back in time to obtain the genetic code of Jesus.</p>
+                <a href="orpheus.html"><button class="button">More</button></a>
+            </div>
+        </section>
     </section>
 </main>
 
-<footer id="footer" data-style="fullscreen">
+<footer id="footer">
     <nav>
         <a href="https://instagram.com/anticverse" target="_blank">Instagram</a>
         <a href="https://linkedin.com/company/anticverse" target="_blank">LinkedIn</a>
@@ -75,6 +97,7 @@
         <a href="https://opensea.io/Anticverse" target="_blank">OpenSea</a>
         <a href="https://www.artstation.com/anticversetech" target="_blank">ArtStation</a>
     </nav>
+
     <nav>
         <a href="https://instagram.com/anticverse" target="_blank"><img alt="ig" src="assets/media/logos/instagram.svg"></a>
         <a href="https://linkedin.com/company/anticverse" target="_blank"><img alt="in" src="assets/media/logos/linkedin.webp"></a>
@@ -84,8 +107,8 @@
         <a href="https://opensea.io/Anticverse" target="_blank"><img alt="os" src="assets/media/logos/opensea.webp"></a>
         <a href="https://www.artstation.com/anticversetech" target="_blank"><img alt="as" src="assets/media/logos/artstation.webp"></a>
     </nav>
+    
     <h1>&copy; 2023 <span>Anticverse</span>, all rights reserved.</h1>
 </footer>
-
 </body>
 </html>
