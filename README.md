@@ -11,7 +11,7 @@ Anticverse Labs. kurumsal web sitesinin geliştirildiği repository'e hoş geldi
 ### yayında olan sayfalar
 
 | Dal    | URL                              |
-| ------ | -------------------------------- |
+|--------|----------------------------------|
 | `prod` | https://www.anticverse.com       |
 | `main` | https://dev.anticverse.com       |
 | `dev`  | https://anticverse.github.io/com |
