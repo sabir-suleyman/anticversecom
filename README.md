@@ -4,15 +4,15 @@ Anticverse Labs. kurumsal web sitesinin geliştirildiği repository'e hoş geldi
 
 ### dallar
 
-- `main`: test edilmiş ve prodüksiyona aktarılmayı bekleyen özellikler
-- `dev`: canlı geliştirme dalı
+- `main`: kurumsal sitenin yayınlandığı *canlı* dal
+- `dev`: aktif geliştirme dalı
 
-### yayında olan sayfalar
+### yayında olan siteler
 
-| Dal    | URL                              |
-|--------|----------------------------------|
-| `main` | https://www.anticverse.com       |
-| `dev`  | https://avdev.web.app/           |
+| Dal    | URL                                         |
+|--------|---------------------------------------------|
+| `main` | https://www.anticverse.com                  |
+| `dev`  | https://anticversecom-dev.web.app/          |
 
 ### yüklenici ekol
 
