@@ -4,17 +4,15 @@ Anticverse Labs. kurumsal web sitesinin geliştirildiği repository'e hoş geldi
 
 ### dallar
 
-- `main`: test edilmiş ve prodüksiyona aktarılmayı bekleyen özellikler [![Deploy production](https://github.com/anticverse/com/actions/workflows/main.yml/badge.svg?branch=prod)](https://github.com/anticverse/com/actions/workflows/main.yml)
-- `dev`: canlı geliştirme dalı [![Deploy dev branch to GitHub Pages](https://github.com/anticverse/.com/actions/workflows/deploy_dev.yml/badge.svg?branch=dev&event=push)](https://github.com/anticverse/.com/actions/workflows/deploy_dev.yml)
-- `prod`: sitemizde yayında olan dal [![Deploy production](https://github.com/anticverse/com/actions/workflows/main.yml/badge.svg)](https://github.com/anticverse/com/actions/workflows/main.yml)
+- `main`: kurumsal sitenin yayınlandığı *canlı* dal
+- `dev`: aktif geliştirme dalı
 
-### yayında olan sayfalar
+### yayında olan siteler
 
-| Dal    | URL                              |
-|--------|----------------------------------|
-| `prod` | https://www.anticverse.com       |
-| `main` | https://dev.anticverse.com       |
-| `dev`  | https://anticverse.github.io/com |
+| Dal    | URL                                         |
+|--------|---------------------------------------------|
+| `main` | https://www.anticverse.com                  |
+| `dev`  | https://anticversecom-dev.web.app/          |
 
 ### yüklenici ekol
 
