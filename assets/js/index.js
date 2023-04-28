@@ -23,3 +23,7 @@ window.addEventListener('scroll', function() {
         $el.style.display = 'block';
     }
 });
+
+function closeAnnouncement() {
+    document.getElementById("announcement").remove()
+}
