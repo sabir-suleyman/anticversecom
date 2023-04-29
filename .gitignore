@@ -2,3 +2,4 @@
 ignore/
 *.css.map
 test.html
+*.cache
