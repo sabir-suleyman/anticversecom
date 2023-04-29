@@ -50,8 +50,3 @@ window.addEventListener('scroll', function() {
         $el.style.display = 'block';
     }
 });
-
-function closeAnnouncement() {
-    document.getElementById("announcement").style["display"] = "none";
-    document.getElementById("announcement").remove();
-}
