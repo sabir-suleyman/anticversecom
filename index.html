@@ -15,12 +15,12 @@
     <meta name="msapplication-TileColor" content="#000000">
     <meta name="theme-color" content="#000000">
 
-    <link href="assets/css/main.css?version=4" rel="stylesheet" type="text/css">
-    <link href="assets/css/view/index.css?version=4" rel="stylesheet" type="text/css">
+    <link href="assets/css/main.css?version=5" rel="stylesheet" type="text/css">
+    <link href="assets/css/view/index.css?version=5" rel="stylesheet" type="text/css">
     <link href="assets/css/components/button.css" rel="stylesheet" type="text/css">
     <link href="assets/css/components/cards.css?version=3" rel="stylesheet" type="text/css">
     <link href="assets/css/components/gallery.css" rel="stylesheet" type="text/css">
-    <link href="assets/css/animations.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/animations.css?version=2" rel="stylesheet" type="text/css">
 
     <script src="assets/js/main.js" defer></script>
     <script src="assets/js/index.js" defer></script>
@@ -70,13 +70,13 @@
 </aside>
 
 <main>
-    <section id="announcement" class="anim-slide-up-appear">
+    <section id="announcement" class="anim-slide-up-appear timing-veryfast">
         <h1>1. Anticverse Kongresi ve İnegöl Eğitim Etkinliği</h1>
         <p>2 Mayıs 2023'te İnegöl Belediyesi, İnegöl İlçe Milli Eğitim Müdürlüğü ve Uludağ UYBİST katkılarıyla düzenlenecek olan eğitim etkinliğinde Anticverse bünyesinde yer alan Ekollerin liderleri tarafından yüz yüze verilecek olan teorik & pratik eğitimlerden yararlanabilir, bölüm tanıtımları, eğlenceli yarışmalar, atölye çalışmaları ve bireysel tanışma & sosyalleşme etkinlikleri ile hem kaliteli vakit geçirebilir hem de yeteneklerinizi keşfedebilirsiniz.</p>
         <p>Etkinlik tamamen ücretsizdir, katılmak için aşağıda yer alan butona tıklayarak açılacak olan formu doldurmanız gerekmektedir.</p>
         <nav>
             <a href="https://anticverse.com/s/ac737e"><button class="button" style="margin-left: 0;">Forma Git</button></a>
-            <a href="#" onclick="closeAnnouncement()"><button class="button">Kapat</button></a>
+            <button class="button" onclick="closeAnnouncement()">Kapat</button>
         </nav>
     </section>
     <!--suppress CssOverwrittenProperties -->
@@ -84,7 +84,7 @@
         <video src="assets/media/index/poster.webm" autoplay muted loop></video>
         <h1 class="anim-slide-down-appear">Anticverse <span>Labs.</span></h1>
         <h2 class="anim-slide-up-appear">Meta-archetypes of technologies, philosophy based informatics group.</h2>
-        <div id="please-scroll-down"></div>
+        <div class="anim-appear" id="please-scroll-down"></div>
     </section>
 
     <section class="padded" id="sec-wwr">
