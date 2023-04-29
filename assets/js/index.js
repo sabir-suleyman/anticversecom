@@ -25,5 +25,6 @@ window.addEventListener('scroll', function() {
 });
 
 function closeAnnouncement() {
-    document.getElementById("announcement").remove()
+    document.getElementById("announcement").style["display"] = "none";
+    document.getElementById("announcement").remove();
 }
