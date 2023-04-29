@@ -5,6 +5,7 @@ let fadeEffect;
 function closeAnnouncement() {
     $announcement.style["display"] = "none";
     $announcement.remove();
+    setCookie("seen-event-announcement", "true", 1);
 }
 
 function setCookie(name, value, days) {
@@ -28,6 +29,12 @@ function getCookie(name) {
     }
     return null;
 }
+
+if (getCookie("seen-event-announcement") === "true") {
+    $announcement.style["display"] = "none";
+    $announcement.remove();
+}
+
 window.addEventListener('scroll', function() {
     if (window.scrollY > 0) {
         // If the user has scrolled down, fade out the element
