@@ -19,7 +19,6 @@ $veryslow: 3s;
 
 .anim-slide-down-appear, .anim-slide-right-appear, .anim-slide-up-appear, .anim-appear {
   opacity: 0;
-  filter: blur(5px);
   transition: opacity ease-out, filter ease-out, transform ease-out;
   transition-duration: $normal;
 }
@@ -38,7 +37,6 @@ $veryslow: 3s;
 
 .slide-down-appear, .slide-right-appear, .slide-up-appear, .appear {
   opacity: 1;
-  filter: blur(0);
 }
 
 .slide-down-appear, .slide-up-appear {
