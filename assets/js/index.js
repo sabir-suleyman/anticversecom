@@ -1,6 +1,11 @@
 const $el = document.getElementById('please-scroll-down');
+const $announcement = document.getElementById("announcement");
 let fadeEffect;
 
+function closeAnnouncement() {
+    $announcement.style["display"] = "none";
+    $announcement.remove();
+}
 window.addEventListener('scroll', function() {
     if (window.scrollY > 0) {
         // If the user has scrolled down, fade out the element
