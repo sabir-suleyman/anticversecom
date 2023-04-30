@@ -1,4 +1,4 @@
-name: Deploy development
+name: Deploy dev
 on:
   push:
     branches:
@@ -6,7 +6,7 @@ on:
 jobs:
   deploy:
     environment:
-      name: development
+      name: dev
       url: https://anticversecom-dev.web.app
     runs-on: ubuntu-latest
     steps:
