@@ -16,8 +16,8 @@ jobs:
       - name: Upload to server
         uses: SamKirkland/FTP-Deploy-Action@4.3.3
         with:
-          server: ftp.anticverse.com
-          username: ${{ secrets.FTP_PROD_USER }}
-          password: ${{ secrets.FTP_PROD_PASS }}
-          server-dir: ${{ secrets.FTP_PROD_PATH }}
+          server: ${{ secrets.PROD_SERV }}
+          username: ${{ secrets.PROD_USER }}
+          password: ${{ secrets.PROD_PASS }}
+          server-dir: ${{ secrets.PROD_PATH }}
           protocol: ftps
