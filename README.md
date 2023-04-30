@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://raw.githubusercontent.com/anticverse/com/main/assets/media/github-banner.png" alt="anticverse/com repository banner" width=500>
+</p>
+
 ## anticverse/com
 
 Anticverse Labs. kurumsal web sitesinin geliştirildiği repository'e hoş geldiniz!
@@ -24,7 +28,7 @@ Anticverse Labs. için Webraider tarafından geliştirilmiştir.
 
 Sorumlu: Ferit Yiğit BALABAN <[balaban.ferityigit@anticverse.com][4]>
 
-[1]: https://github.com/anticverse/com/actions/workflows/main.yml/badge.svg?branch=main
-[2]: https://github.com/anticverse/com/actions/workflows/firebase-hosting-merge.yml/badge.svg?branch=dev
+[1]: https://github.com/anticverse/com/actions/workflows/main.yml/badge.svg
+[2]: https://github.com/anticverse/com/actions/workflows/firebase-hosting-merge.yml/badge.svg
 [3]: mailto:webraider@anticverse.com
 [4]: mailto:balaban.ferityigit@anticverse.com
